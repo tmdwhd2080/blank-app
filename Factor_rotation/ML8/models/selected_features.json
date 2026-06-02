@@ -1,0 +1,38 @@
+{
+  "DRAI_RISK_ON": [
+    "SPX INDEX_PR893_val",
+    "V2X INDEX_PX_LAST_val",
+    "KOSPI2 INDEX_PR893_val",
+    "TGA_BALANCE_D_val",
+    "JPEIPLSP Index_PX_LAST_val",
+    "OVX INDEX_PX_LAST_val",
+    "FARBLNSC Index_PX_LAST_val",
+    "MOVE INDEX_PX_LAST_val",
+    "VIX INDEX_PX_LAST_val",
+    "CSI BARC Index_PX_LAST_val"
+  ],
+  "DRAI_NEUTRAL": [
+    "V2X INDEX_PX_LAST_val",
+    "KOSPI2 INDEX_PR893_val",
+    "FARBLNSC Index_PX_LAST_val",
+    "OVX INDEX_PX_LAST_val",
+    "JPEIPLSP Index_PX_LAST_val",
+    "SPX INDEX_PR893_val",
+    "CSI BARC Index_PX_LAST_val",
+    "MOVE INDEX_PX_LAST_val",
+    "TGA_BALANCE_D_val",
+    "VIX INDEX_PX_LAST_val"
+  ],
+  "DRAI_RISK_OFF": [
+    "V2X INDEX_PX_LAST_val",
+    "JPEIPLSP Index_PX_LAST_val",
+    "TGA_BALANCE_D_val",
+    "KOSPI2 INDEX_PR893_val",
+    "OVX INDEX_PX_LAST_val",
+    "SPX INDEX_PR893_val",
+    "VIX INDEX_PX_LAST_val",
+    "MOVE INDEX_PX_LAST_val",
+    "FARBLNSC Index_PX_LAST_val",
+    "CSI BARC Index_PX_LAST_val"
+  ]
+}

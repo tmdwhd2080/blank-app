@@ -1,0 +1,61 @@
+{
+  "cash_coefficients": {
+    "DRAI_RISK_ON": {
+      "dsr_coef": 79.59171633233629,
+      "excess_return_coef": 35.957591680586766,
+      "cash_holding_bonus": -1.8594502713874768,
+      "opportunity_cost_coef": 15.625535083826977,
+      "rolling_performance_coef": 2.1148099052799454,
+      "drawdown_penalty": 0.0
+    },
+    "DRAI_NEUTRAL": {
+      "dsr_coef": 68.62384191357174,
+      "excess_return_coef": 20.725006460630205,
+      "cash_holding_bonus": 15.369436099169043,
+      "opportunity_cost_coef": 8.854080515841542,
+      "rolling_performance_coef": 7.2953157423131545,
+      "drawdown_penalty": 0.0
+    },
+    "DRAI_RISK_OFF": {
+      "dsr_coef": 57.39430735679496,
+      "excess_return_coef": 80.02828880170999,
+      "cash_holding_bonus": 1.34519175668252,
+      "opportunity_cost_coef": 16.021660083538585,
+      "rolling_performance_coef": 10.088268592459167,
+      "drawdown_penalty": 0.753855769793535
+    }
+  },
+  "factor_coefficients": {
+    "DRAI_RISK_ON": {
+      "dsr_coef": 90.21897588810376,
+      "return_coef": 39.28829709640654,
+      "diversity_bonus": 4.5212361714514255,
+      "concentration_penalty": 4.142929823463399,
+      "momentum_bonus": 6.5909247787497645,
+      "stability_bonus": 0.0,
+      "opportunity_bonus": 0.0
+    },
+    "DRAI_NEUTRAL": {
+      "dsr_coef": 18.7431831788514,
+      "return_coef": 24.39864904250493,
+      "diversity_bonus": 14.328638618220689,
+      "concentration_penalty": 26.823916204724508,
+      "momentum_bonus": 0.0,
+      "stability_bonus": 0.0,
+      "opportunity_bonus": 4.786809026946122
+    },
+    "DRAI_RISK_OFF": {
+      "dsr_coef": 33.00293903205103,
+      "return_coef": 76.97901019636134,
+      "diversity_bonus": 8.197910284427921,
+      "concentration_penalty": 2.181996606135553,
+      "momentum_bonus": 0.0,
+      "stability_bonus": 0.06819759856730156,
+      "opportunity_bonus": 0.0
+    }
+  },
+  "metadata": {
+    "created_at": "2026-02-02T16:56:18.903915",
+    "version": "8.0_ml8_regime_split"
+  }
+}
