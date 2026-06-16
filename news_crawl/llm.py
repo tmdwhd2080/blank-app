@@ -1,15 +1,5 @@
 
 
-\
-\
-\
-\
-\
-\
-\
-\
-   
-
 from __future__ import annotations
 
 import json
@@ -22,7 +12,6 @@ from news_crawl.utils import extract_json
 
 
 def look_ahead_guard(as_of: str) -> str:
-                                                          
     return (
         "‼️ LOOK-AHEAD BIAS 금지 (반드시 준수):\n"
         f"- 기준 시점은 {as_of} 이다. 오직 이 시점 '이전'에 공개된 정보만 사용하라.\n"
@@ -39,7 +28,7 @@ class LLMRouter:
         self.timeout = timeout
         self.session = requests.Session()
 
-                 
+    # --- 가용성 ---
     @property
     def has_qwen(self) -> bool:
         return bool(self.config.qwen_api_key)
@@ -52,7 +41,7 @@ class LLMRouter:
     def has_gpt(self) -> bool:
         return bool(self.config.openai_api_key)
 
-                    
+    # --- 개별 백엔드 ---
     def qwen(self, system: str, user: str) -> str | None:
         if not self.has_qwen:
             return None
@@ -137,7 +126,7 @@ class LLMRouter:
         except (requests.RequestException, ValueError, KeyError, IndexError):
             return None
 
-                         
+    # --- 편의: JSON 파싱 ---
     def call_json(self, backend: str, system: str, user: str) -> Any | None:
         caller = {"qwen": self.qwen, "gemini": self.gemini, "gpt": self.gpt}.get(backend)
         if caller is None:
@@ -151,7 +140,6 @@ class LLMRouter:
             return None
 
     def screen_json(self, system: str, user: str) -> tuple[Any | None, str]:
-                                                
         for backend in ("gemini", "gpt"):
             result = self.call_json(backend, system, user)
             if result is not None:

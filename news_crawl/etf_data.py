@@ -1,15 +1,3 @@
-
-
-\
-\
-\
-\
-\
-\
-\
-\
-   
-
 from __future__ import annotations
 
 from collections.abc import Iterable
@@ -25,8 +13,6 @@ from trading.kis.stocks import (
     inquire_index_daily_chart,
 )
 
-
-                                           
 DEFAULT_ETFS: list[tuple[str, str]] = [
     ("069500", "KODEX 200"),
     ("102110", "TIGER 200"),
@@ -61,7 +47,7 @@ INVESTOR_TR_ID = "FHKST01010900"
 
 
 def _master_etf_universe(limit: int) -> list[Symbol]:
-                                                        
+    """KIS KOSPI 마스터 파일에서 ETF(그룹코드 EF) 목록을 전일거래량 순으로."""
     try:
         from trading.kis_kospi_large_caps import download_master_rows, parse_master
     except Exception:
@@ -127,7 +113,6 @@ def _history_closes(
         )
     except KisError:
         return []
-                               
     parsed: list[tuple[str, float]] = []
     for row in rows:
         day = str(row.get("stck_bsop_date") or "")
@@ -149,7 +134,6 @@ def _supply_demand(
     days: int,
     as_of: datetime | None,
 ) -> tuple[int, int, int, float]:
-                                                  
     try:
         data = client.get(
             INVESTOR_PATH,
@@ -181,11 +165,10 @@ def _supply_demand(
         frgn_amt += parse_float(row.get("frgn_ntby_tr_pbmn")) or 0.0
         inst_amt += parse_float(row.get("orgn_ntby_tr_pbmn")) or 0.0
 
-                                                
     import math
 
     smart_amount = frgn_amt + inst_amt
-    score = math.tanh(smart_amount / 50_000.0)               
+    score = math.tanh(smart_amount / 50_000.0)  # ±500억원에서 포화
     return frgn, inst, indiv, score
 
 

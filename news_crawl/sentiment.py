@@ -1,12 +1,4 @@
 
-
-\
-\
-\
-\
-\
-   
-
 from __future__ import annotations
 
 from news_crawl.llm import LLMRouter, look_ahead_guard
@@ -33,7 +25,7 @@ def _news_polarity(news: list[NewsItem]) -> tuple[int, int]:
 def heuristic_s_score(
     news: list[NewsItem], feature: ETFFeature | None
 ) -> tuple[float, float, float, float, str]:
-                                                                           
+    """(s_score, confidence, supply_demand_signal, nav_signal, summary)."""
     pos, neg = _news_polarity(news)
     news_component = 14.0 * (pos - neg)
 
