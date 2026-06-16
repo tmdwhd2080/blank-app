@@ -1,0 +1,26 @@
+{
+  "window_start": "2026-06-12T15:30:00+09:00",
+  "window_end": "2026-06-13T09:10:00+09:00",
+  "as_of": "2026-06-13 09:10 KST",
+  "mode": "etf_recommendation",
+  "universe_size": 25,
+  "feature_rows": 25,
+  "selected": [
+    "122630",
+    "102110",
+    "091160",
+    "229200",
+    "069500",
+    "233740",
+    "449450",
+    "305540",
+    "294400",
+    "278530"
+  ],
+  "llm": {
+    "qwen": false,
+    "gemini": false,
+    "gpt": true
+  },
+  "out_dir": "out\\news_crawl\\20260613_091000"
+}

@@ -1,0 +1,11 @@
+﻿code,name,relative_return_bps,confidence,reason
+001500,현대차증권,-58.60980810234544,0.75,fallback from S_SCORE and one-week momentum
+001510,SK증권,-146.35736677115977,0.75,fallback from S_SCORE and one-week momentum
+003470,유안타증권,-68.99009900990107,0.75,fallback from S_SCORE and one-week momentum
+000720,현대건설,-139.38599105812213,0.75,fallback from S_SCORE and one-week momentum
+003030,세아제강지주,-76.6803105151728,0.59,fallback from S_SCORE and one-week momentum
+000810,삼성화재,84.6427457098282,0.75,fallback from S_SCORE and one-week momentum
+001720,신영증권,-101.84324624791554,0.75,fallback from S_SCORE and one-week momentum
+001740,SK네트웍스,-166.24299065420558,0.75,fallback from S_SCORE and one-week momentum
+001450,현대해상,188.4137931034484,0.59,fallback from S_SCORE and one-week momentum
+000370,한화손해보험,65.18032786885229,0.51,fallback from S_SCORE and one-week momentum

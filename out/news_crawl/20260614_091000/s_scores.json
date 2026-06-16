@@ -1,0 +1,57 @@
+{
+  "069500": {
+    "code": "069500",
+    "name": "KODEX 200",
+    "s_score": 37.86040912403031,
+    "confidence": 0.29947653421511367,
+    "news_count": 1,
+    "supply_demand_signal": 7.860409124030313,
+    "nav_signal": 30.0,
+    "summary": "news(pos=0,neg=0) nav%=5.61 sd=+0.20",
+    "model": "analysis"
+  },
+  "102110": {
+    "code": "102110",
+    "name": "TIGER 200",
+    "s_score": 61.81536621733542,
+    "confidence": 0.31930762331500784,
+    "news_count": 0,
+    "supply_demand_signal": 31.815366217335427,
+    "nav_signal": 30.0,
+    "summary": "news(pos=0,neg=0) nav%=5.61 sd=+0.80",
+    "model": "analysis"
+  },
+  "122630": {
+    "code": "122630",
+    "name": "KODEX 레버리지",
+    "s_score": 67.88100465919484,
+    "confidence": 0.41205376747198064,
+    "news_count": 1,
+    "supply_demand_signal": 37.881004659194836,
+    "nav_signal": 30.0,
+    "summary": "news(pos=0,neg=0) nav%=11.93 sd=+0.95",
+    "model": "analysis"
+  },
+  "252670": {
+    "code": "252670",
+    "name": "KODEX 200선물인버스2X",
+    "s_score": -3.9588997443791314,
+    "confidence": 0.29765412595857826,
+    "news_count": 0,
+    "supply_demand_signal": 26.04110025562087,
+    "nav_signal": -30.0,
+    "summary": "news(pos=0,neg=0) nav%=-13.05 sd=+0.65",
+    "model": "analysis"
+  },
+  "229200": {
+    "code": "229200",
+    "name": "KODEX 코스닥150",
+    "s_score": 11.76246292107436,
+    "confidence": 0.23270923595402887,
+    "news_count": 0,
+    "supply_demand_signal": 8.72246292107436,
+    "nav_signal": 3.04,
+    "summary": "news(pos=0,neg=0) nav%=0.38 sd=+0.22",
+    "model": "analysis"
+  }
+}

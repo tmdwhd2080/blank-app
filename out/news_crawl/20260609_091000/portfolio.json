@@ -1,0 +1,81 @@
+{
+  "targets": [
+    {
+      "code": "001440",
+      "name": "대한전선",
+      "weight": 0.07500000000000001,
+      "expected_return_ann": -5.473122444329265,
+      "current_price": 37750.0
+    },
+    {
+      "code": "003530",
+      "name": "한화투자증권",
+      "weight": 0.07500000000000001,
+      "expected_return_ann": -5.162976598636669,
+      "current_price": 5430.0
+    },
+    {
+      "code": "001500",
+      "name": "현대차증권",
+      "weight": 0.07500000000000001,
+      "expected_return_ann": -4.220539646494106,
+      "current_price": 8720.0
+    },
+    {
+      "code": "000270",
+      "name": "기아",
+      "weight": 0.07500000000000001,
+      "expected_return_ann": -3.3425679356264735,
+      "current_price": 161500.0
+    },
+    {
+      "code": "003490",
+      "name": "대한항공",
+      "weight": 0.07500000000000001,
+      "expected_return_ann": -3.296232591859589,
+      "current_price": 24550.0
+    },
+    {
+      "code": "001720",
+      "name": "신영증권",
+      "weight": 0.2,
+      "expected_return_ann": -3.251085344697789,
+      "current_price": 168000.0
+    },
+    {
+      "code": "000720",
+      "name": "현대건설",
+      "weight": 0.07500000000000001,
+      "expected_return_ann": -5.203237089899266,
+      "current_price": 118300.0
+    },
+    {
+      "code": "000880",
+      "name": "한화",
+      "weight": 0.07500000000000001,
+      "expected_return_ann": -4.5979507964000765,
+      "current_price": 114600.0
+    },
+    {
+      "code": "001200",
+      "name": "유진투자증권",
+      "weight": 0.07500000000000001,
+      "expected_return_ann": -4.420908992365896,
+      "current_price": 4290.0
+    },
+    {
+      "code": "002350",
+      "name": "넥센타이어",
+      "weight": 0.2,
+      "expected_return_ann": -1.4475021534503592,
+      "current_price": 6710.0
+    }
+  ],
+  "diagnostics": {
+    "method": "black_litterman",
+    "risk_aversion": 2.5,
+    "tau": 0.05,
+    "max_weight": 0.2,
+    "market_mean_ann": 0.0
+  }
+}

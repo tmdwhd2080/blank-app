@@ -1,0 +1,101 @@
+[
+  {
+    "code": "000660",
+    "name": "",
+    "side": "SELL",
+    "quantity": 8,
+    "ref_price": 2150000.0,
+    "amount": 17200000.0,
+    "reason": "remove non-target"
+  },
+  {
+    "code": "001500",
+    "name": "현대차증권",
+    "side": "BUY",
+    "quantity": 168,
+    "ref_price": 9290.0,
+    "amount": 1560720.0,
+    "reason": "target_weight=0.0571"
+  },
+  {
+    "code": "001510",
+    "name": "SK증권",
+    "side": "BUY",
+    "quantity": 522,
+    "ref_price": 3005.0,
+    "amount": 1568610.0,
+    "reason": "target_weight=0.0571"
+  },
+  {
+    "code": "003470",
+    "name": "유안타증권",
+    "side": "BUY",
+    "quantity": 316,
+    "ref_price": 4965.0,
+    "amount": 1568940.0,
+    "reason": "target_weight=0.0571"
+  },
+  {
+    "code": "000720",
+    "name": "현대건설",
+    "side": "BUY",
+    "quantity": 11,
+    "ref_price": 134400.0,
+    "amount": 1478400.0,
+    "reason": "target_weight=0.0571"
+  },
+  {
+    "code": "003030",
+    "name": "세아제강지주",
+    "side": "BUY",
+    "quantity": 11,
+    "ref_price": 137400.0,
+    "amount": 1511400.0,
+    "reason": "target_weight=0.0571"
+  },
+  {
+    "code": "000810",
+    "name": "삼성화재",
+    "side": "BUY",
+    "quantity": 8,
+    "ref_price": 667000.0,
+    "amount": 5336000.0,
+    "reason": "target_weight=0.2000"
+  },
+  {
+    "code": "001720",
+    "name": "신영증권",
+    "side": "BUY",
+    "quantity": 9,
+    "ref_price": 174300.0,
+    "amount": 1568700.0,
+    "reason": "target_weight=0.0571"
+  },
+  {
+    "code": "001740",
+    "name": "SK네트웍스",
+    "side": "BUY",
+    "quantity": 123,
+    "ref_price": 12680.0,
+    "amount": 1559640.0,
+    "reason": "target_weight=0.0571"
+  },
+  {
+    "code": "001450",
+    "name": "현대해상",
+    "side": "BUY",
+    "quantity": 145,
+    "ref_price": 37700.0,
+    "amount": 5466500.0,
+    "reason": "target_weight=0.2000"
+  },
+  {
+    "code": "000370",
+    "name": "한화손해보험",
+    "side": "BUY",
+    "quantity": 882,
+    "ref_price": 6220.0,
+    "amount": 5486040.0,
+    "reason": "target_weight=0.2000"
+  }
+]

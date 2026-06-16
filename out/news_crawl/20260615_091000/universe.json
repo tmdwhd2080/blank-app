@@ -1,0 +1,127 @@
+[
+  {
+    "code": "069500",
+    "name": "KODEX 200",
+    "market": "ETF"
+  },
+  {
+    "code": "102110",
+    "name": "TIGER 200",
+    "market": "ETF"
+  },
+  {
+    "code": "122630",
+    "name": "KODEX 레버리지",
+    "market": "ETF"
+  },
+  {
+    "code": "252670",
+    "name": "KODEX 200선물인버스2X",
+    "market": "ETF"
+  },
+  {
+    "code": "229200",
+    "name": "KODEX 코스닥150",
+    "market": "ETF"
+  },
+  {
+    "code": "233740",
+    "name": "KODEX 코스닥150레버리지",
+    "market": "ETF"
+  },
+  {
+    "code": "360750",
+    "name": "TIGER 미국S&P500",
+    "market": "ETF"
+  },
+  {
+    "code": "379800",
+    "name": "KODEX 미국S&P500",
+    "market": "ETF"
+  },
+  {
+    "code": "133690",
+    "name": "TIGER 미국나스닥100",
+    "market": "ETF"
+  },
+  {
+    "code": "379810",
+    "name": "KODEX 미국나스닥100",
+    "market": "ETF"
+  },
+  {
+    "code": "305720",
+    "name": "KODEX 2차전지산업",
+    "market": "ETF"
+  },
+  {
+    "code": "305540",
+    "name": "TIGER 2차전지테마",
+    "market": "ETF"
+  },
+  {
+    "code": "091160",
+    "name": "KODEX 반도체",
+    "market": "ETF"
+  },
+  {
+    "code": "091170",
+    "name": "KODEX 은행",
+    "market": "ETF"
+  },
+  {
+    "code": "117460",
+    "name": "KODEX 에너지화학",
+    "market": "ETF"
+  },
+  {
+    "code": "139660",
+    "name": "TIGER 200 IT",
+    "market": "ETF"
+  },
+  {
+    "code": "228790",
+    "name": "TIGER 화장품",
+    "market": "ETF"
+  },
+  {
+    "code": "143860",
+    "name": "TIGER 헬스케어",
+    "market": "ETF"
+  },
+  {
+    "code": "305080",
+    "name": "TIGER 미국채10년선물",
+    "market": "ETF"
+  },
+  {
+    "code": "214980",
+    "name": "KODEX 단기채권PLUS",
+    "market": "ETF"
+  },
+  {
+    "code": "273130",
+    "name": "KODEX 종합채권",
+    "market": "ETF"
+  },
+  {
+    "code": "278530",
+    "name": "KODEX 200TR",
+    "market": "ETF"
+  },
+  {
+    "code": "294400",
+    "name": "KOSEF 200TR",
+    "market": "ETF"
+  },
+  {
+    "code": "411060",
+    "name": "ACE 미국빅테크TOP7Plus",
+    "market": "ETF"
+  },
+  {
+    "code": "449450",
+    "name": "PLUS K방산",
+    "market": "ETF"
+  }
+]

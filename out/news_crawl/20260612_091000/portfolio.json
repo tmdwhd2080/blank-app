@@ -1,0 +1,81 @@
+{
+  "targets": [
+    {
+      "code": "001500",
+      "name": "현대차증권",
+      "weight": 0.05714285714285714,
+      "expected_return_ann": -0.9524450627207531,
+      "current_price": 9290.0
+    },
+    {
+      "code": "001510",
+      "name": "SK증권",
+      "weight": 0.05714285714285714,
+      "expected_return_ann": -1.802602905538888,
+      "current_price": 3005.0
+    },
+    {
+      "code": "003470",
+      "name": "유안타증권",
+      "weight": 0.05714285714285714,
+      "expected_return_ann": -1.071334339625091,
+      "current_price": 4965.0
+    },
+    {
+      "code": "000720",
+      "name": "현대건설",
+      "weight": 0.05714285714285714,
+      "expected_return_ann": -1.4313861091998994,
+      "current_price": 134400.0
+    },
+    {
+      "code": "003030",
+      "name": "세아제강지주",
+      "weight": 0.05714285714285714,
+      "expected_return_ann": -0.8222151955114175,
+      "current_price": 137400.0
+    },
+    {
+      "code": "000810",
+      "name": "삼성화재",
+      "weight": 0.19999999999999996,
+      "expected_return_ann": 0.8405726665772518,
+      "current_price": 667000.0
+    },
+    {
+      "code": "001720",
+      "name": "신영증권",
+      "weight": 0.05714285714285714,
+      "expected_return_ann": -0.5745927976709945,
+      "current_price": 174300.0
+    },
+    {
+      "code": "001740",
+      "name": "SK네트웍스",
+      "weight": 0.05714285714285714,
+      "expected_return_ann": -1.2594895496908327,
+      "current_price": 12680.0
+    },
+    {
+      "code": "001450",
+      "name": "현대해상",
+      "weight": 0.19999999999999996,
+      "expected_return_ann": 1.3784008052489096,
+      "current_price": 37700.0
+    },
+    {
+      "code": "000370",
+      "name": "한화손해보험",
+      "weight": 0.19999999999999996,
+      "expected_return_ann": 1.4057148122510597,
+      "current_price": 6220.0
+    }
+  ],
+  "diagnostics": {
+    "method": "black_litterman",
+    "risk_aversion": 2.5,
+    "tau": 0.05,
+    "max_weight": 0.2,
+    "market_mean_ann": 0.0
+  }
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "code": "001500",
+    "name": "현대차증권",
+    "relative_return_bps": -58.60980810234544,
+    "confidence": 0.75,
+    "reason": "fallback from S_SCORE and one-week momentum"
+  },
+  {
+    "code": "001510",
+    "name": "SK증권",
+    "relative_return_bps": -146.35736677115977,
+    "confidence": 0.75,
+    "reason": "fallback from S_SCORE and one-week momentum"
+  },
+  {
+    "code": "003470",
+    "name": "유안타증권",
+    "relative_return_bps": -68.99009900990107,
+    "confidence": 0.75,
+    "reason": "fallback from S_SCORE and one-week momentum"
+  },
+  {
+    "code": "000720",
+    "name": "현대건설",
+    "relative_return_bps": -139.38599105812213,
+    "confidence": 0.75,
+    "reason": "fallback from S_SCORE and one-week momentum"
+  },
+  {
+    "code": "003030",
+    "name": "세아제강지주",
+    "relative_return_bps": -76.6803105151728,
+    "confidence": 0.59,
+    "reason": "fallback from S_SCORE and one-week momentum"
+  },
+  {
+    "code": "000810",
+    "name": "삼성화재",
+    "relative_return_bps": 84.6427457098282,
+    "confidence": 0.75,
+    "reason": "fallback from S_SCORE and one-week momentum"
+  },
+  {
+    "code": "001720",
+    "name": "신영증권",
+    "relative_return_bps": -101.84324624791554,
+    "confidence": 0.75,
+    "reason": "fallback from S_SCORE and one-week momentum"
+  },
+  {
+    "code": "001740",
+    "name": "SK네트웍스",
+    "relative_return_bps": -166.24299065420558,
+    "confidence": 0.75,
+    "reason": "fallback from S_SCORE and one-week momentum"
+  },
+  {
+    "code": "001450",
+    "name": "현대해상",
+    "relative_return_bps": 188.4137931034484,
+    "confidence": 0.59,
+    "reason": "fallback from S_SCORE and one-week momentum"
+  },
+  {
+    "code": "000370",
+    "name": "한화손해보험",
+    "relative_return_bps": 65.18032786885229,
+    "confidence": 0.51,
+    "reason": "fallback from S_SCORE and one-week momentum"
+  }
+]

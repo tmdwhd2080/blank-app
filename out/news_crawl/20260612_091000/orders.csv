@@ -1,0 +1,12 @@
+﻿code,name,side,quantity,ref_price,amount,reason
+000660,,SELL,8,2150000.0,17200000.0,remove non-target
+001500,현대차증권,BUY,168,9290.0,1560720.0,target_weight=0.0571
+001510,SK증권,BUY,522,3005.0,1568610.0,target_weight=0.0571
+003470,유안타증권,BUY,316,4965.0,1568940.0,target_weight=0.0571
+000720,현대건설,BUY,11,134400.0,1478400.0,target_weight=0.0571
+003030,세아제강지주,BUY,11,137400.0,1511400.0,target_weight=0.0571
+000810,삼성화재,BUY,8,667000.0,5336000.0,target_weight=0.2000
+001720,신영증권,BUY,9,174300.0,1568700.0,target_weight=0.0571
+001740,SK네트웍스,BUY,123,12680.0,1559640.0,target_weight=0.0571
+001450,현대해상,BUY,145,37700.0,5466500.0,target_weight=0.2000
+000370,한화손해보험,BUY,882,6220.0,5486040.0,target_weight=0.2000

@@ -1,0 +1,82 @@
+[
+  {
+    "code": "122630",
+    "name": "KODEX 레버리지",
+    "rank": 1,
+    "reason": "휴리스틱: 감성·수급·NAV변화·모멘텀 종합 순위",
+    "score": 67.88100465919484,
+    "model": "heuristic"
+  },
+  {
+    "code": "102110",
+    "name": "TIGER 200",
+    "rank": 2,
+    "reason": "휴리스틱: 감성·수급·NAV변화·모멘텀 종합 순위",
+    "score": 61.81536621733542,
+    "model": "heuristic"
+  },
+  {
+    "code": "091160",
+    "name": "KODEX 반도체",
+    "rank": 3,
+    "reason": "휴리스틱: 감성·수급·NAV변화·모멘텀 종합 순위",
+    "score": 54.79987471877496,
+    "model": "heuristic"
+  },
+  {
+    "code": "229200",
+    "name": "KODEX 코스닥150",
+    "rank": 4,
+    "reason": "휴리스틱: 감성·수급·NAV변화·모멘텀 종합 순위",
+    "score": 38.24246292107436,
+    "model": "heuristic"
+  },
+  {
+    "code": "069500",
+    "name": "KODEX 200",
+    "rank": 5,
+    "reason": "휴리스틱: 감성·수급·NAV변화·모멘텀 종합 순위",
+    "score": 37.86040912403031,
+    "model": "heuristic"
+  },
+  {
+    "code": "233740",
+    "name": "KODEX 코스닥150레버리지",
+    "rank": 6,
+    "reason": "휴리스틱: 감성·수급·NAV변화·모멘텀 종합 순위",
+    "score": 30.0,
+    "model": "heuristic"
+  },
+  {
+    "code": "449450",
+    "name": "PLUS K방산",
+    "rank": 7,
+    "reason": "휴리스틱: 감성·수급·NAV변화·모멘텀 종합 순위",
+    "score": 32.407486629144174,
+    "model": "heuristic"
+  },
+  {
+    "code": "305540",
+    "name": "TIGER 2차전지테마",
+    "rank": 8,
+    "reason": "휴리스틱: 감성·수급·NAV변화·모멘텀 종합 순위",
+    "score": 31.339498953252015,
+    "model": "heuristic"
+  },
+  {
+    "code": "294400",
+    "name": "KOSEF 200TR",
+    "rank": 9,
+    "reason": "휴리스틱: 감성·수급·NAV변화·모멘텀 종합 순위",
+    "score": 30.806290770556142,
+    "model": "heuristic"
+  },
+  {
+    "code": "278530",
+    "name": "KODEX 200TR",
+    "rank": 10,
+    "reason": "휴리스틱: 감성·수급·NAV변화·모멘텀 종합 순위",
+    "score": 30.0,
+    "model": "heuristic"
+  }
+]

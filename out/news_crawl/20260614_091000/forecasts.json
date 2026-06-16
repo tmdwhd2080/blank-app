@@ -1,0 +1,37 @@
+[
+  {
+    "code": "122630",
+    "name": "KODEX 레버리지",
+    "relative_return_bps": 300.0,
+    "confidence": 0.5620537674719807,
+    "reason": "S_SCORE·모멘텀·수급·NAV변화 종합"
+  },
+  {
+    "code": "102110",
+    "name": "TIGER 200",
+    "relative_return_bps": 221.3570273658736,
+    "confidence": 0.46930762331500786,
+    "reason": "S_SCORE·모멘텀·수급·NAV변화 종합"
+  },
+  {
+    "code": "069500",
+    "name": "KODEX 200",
+    "relative_return_bps": 150.05902770593417,
+    "confidence": 0.4494765342151137,
+    "reason": "S_SCORE·모멘텀·수급·NAV변화 종합"
+  },
+  {
+    "code": "229200",
+    "name": "KODEX 코스닥150",
+    "relative_return_bps": 108.18537161860135,
+    "confidence": 0.38270923595402884,
+    "reason": "S_SCORE·모멘텀·수급·NAV변화 종합"
+  },
+  {
+    "code": "252670",
+    "name": "KODEX 200선물인버스2X",
+    "relative_return_bps": -280.09812021891446,
+    "confidence": 0.44765412595857823,
+    "reason": "S_SCORE·모멘텀·수급·NAV변화 종합"
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "window_start": "2026-06-12T15:30:00+09:00",
+  "window_end": "2026-06-15T09:10:00+09:00",
+  "as_of": "2026-06-15 09:10 KST",
+  "mode": "etf_recommendation",
+  "plan": "premium",
+  "investor_profile": {
+    "risk_appetite": 7.0,
+    "target_return_pct": 12.0,
+    "profile_text": "투기적 성향 7.0/10, 연 목표수익률 12.0%"
+  },
+  "premium_parameters": {
+    "base_tau": 0.05,
+    "tau": 0.094,
+    "base_risk_aversion": 2.5,
+    "risk_aversion": 2.0625
+  },
+  "universe_size": 25,
+  "feature_rows": 25,
+  "selected": [
+    "122630",
+    "233740",
+    "102110",
+    "069500",
+    "091160",
+    "294400",
+    "278530",
+    "411060",
+    "091170",
+    "305540"
+  ],
+  "llm": {
+    "qwen": false,
+    "gemini": false,
+    "gpt": true
+  },
+  "out_dir": "out\\news_crawl\\20260615_091000"
+}

@@ -1,0 +1,1802 @@
+{
+  "000020": {
+    "code": "000020",
+    "name": "동화약품",
+    "s_score": 0.0,
+    "confidence": 0.28,
+    "news_count": 1,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "000040": {
+    "code": "000040",
+    "name": "KR모터스",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000050": {
+    "code": "000050",
+    "name": "경방",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000070": {
+    "code": "000070",
+    "name": "삼양홀딩스",
+    "s_score": 0.0,
+    "confidence": 0.28,
+    "news_count": 1,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "000080": {
+    "code": "000080",
+    "name": "하이트진로",
+    "s_score": -20.0,
+    "confidence": 0.6000000000000001,
+    "news_count": 5,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=1"
+  },
+  "000087": {
+    "code": "000087",
+    "name": "하이트진로2우B",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000100": {
+    "code": "000100",
+    "name": "유한양행",
+    "s_score": 0.0,
+    "confidence": 0.52,
+    "news_count": 4,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "000105": {
+    "code": "000105",
+    "name": "유한양행우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000120": {
+    "code": "000120",
+    "name": "CJ대한통운",
+    "s_score": 0.0,
+    "confidence": 0.6799999999999999,
+    "news_count": 6,
+    "analyst_count": 0,
+    "summary": "heuristic pos=2 neg=2"
+  },
+  "000140": {
+    "code": "000140",
+    "name": "하이트진로홀딩스",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000145": {
+    "code": "000145",
+    "name": "하이트진로홀딩스우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000150": {
+    "code": "000150",
+    "name": "두산",
+    "s_score": 0.0,
+    "confidence": 0.52,
+    "news_count": 4,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "000155": {
+    "code": "000155",
+    "name": "두산우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000157": {
+    "code": "000157",
+    "name": "두산2우B",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000180": {
+    "code": "000180",
+    "name": "성창기업지주",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000210": {
+    "code": "000210",
+    "name": "DL",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000215": {
+    "code": "000215",
+    "name": "DL우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000220": {
+    "code": "000220",
+    "name": "유유제약",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000225": {
+    "code": "000225",
+    "name": "유유제약1우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000227": {
+    "code": "000227",
+    "name": "유유제약2우B",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000230": {
+    "code": "000230",
+    "name": "일동홀딩스",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000240": {
+    "code": "000240",
+    "name": "한국앤컴퍼니",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000270": {
+    "code": "000270",
+    "name": "기아",
+    "s_score": 0.0,
+    "confidence": 0.7,
+    "news_count": 8,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "000300": {
+    "code": "000300",
+    "name": "DH오토넥스",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000320": {
+    "code": "000320",
+    "name": "노루홀딩스",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000325": {
+    "code": "000325",
+    "name": "노루홀딩스우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000370": {
+    "code": "000370",
+    "name": "한화손해보험",
+    "s_score": 20.0,
+    "confidence": 0.36,
+    "news_count": 2,
+    "analyst_count": 0,
+    "summary": "heuristic pos=1 neg=0"
+  },
+  "000390": {
+    "code": "000390",
+    "name": "SP삼화",
+    "s_score": 0.0,
+    "confidence": 0.28,
+    "news_count": 1,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "000400": {
+    "code": "000400",
+    "name": "롯데손해보험",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000430": {
+    "code": "000430",
+    "name": "대원강업",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000480": {
+    "code": "000480",
+    "name": "CR홀딩스",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000490": {
+    "code": "000490",
+    "name": "대동",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000500": {
+    "code": "000500",
+    "name": "가온전선",
+    "s_score": 0.0,
+    "confidence": 0.28,
+    "news_count": 1,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "000520": {
+    "code": "000520",
+    "name": "삼일제약",
+    "s_score": 0.0,
+    "confidence": 0.44,
+    "news_count": 3,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "000540": {
+    "code": "000540",
+    "name": "흥국화재",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000545": {
+    "code": "000545",
+    "name": "흥국화재우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000590": {
+    "code": "000590",
+    "name": "CS홀딩스",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000640": {
+    "code": "000640",
+    "name": "동아쏘시오홀딩스",
+    "s_score": 0.0,
+    "confidence": 0.28,
+    "news_count": 1,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "000650": {
+    "code": "000650",
+    "name": "천일고속",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000660": {
+    "code": "000660",
+    "name": "SK하이닉스",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000670": {
+    "code": "000670",
+    "name": "영풍",
+    "s_score": 0.0,
+    "confidence": 0.6799999999999999,
+    "news_count": 6,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "000680": {
+    "code": "000680",
+    "name": "LS네트웍스",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000700": {
+    "code": "000700",
+    "name": "유수홀딩스",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000720": {
+    "code": "000720",
+    "name": "현대건설",
+    "s_score": 40.0,
+    "confidence": 0.7,
+    "news_count": 8,
+    "analyst_count": 0,
+    "summary": "heuristic pos=2 neg=0"
+  },
+  "000725": {
+    "code": "000725",
+    "name": "현대건설우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000760": {
+    "code": "000760",
+    "name": "이화산업",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000810": {
+    "code": "000810",
+    "name": "삼성화재",
+    "s_score": 20.0,
+    "confidence": 0.7,
+    "news_count": 8,
+    "analyst_count": 0,
+    "summary": "heuristic pos=1 neg=0"
+  },
+  "000815": {
+    "code": "000815",
+    "name": "삼성화재우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000850": {
+    "code": "000850",
+    "name": "화천기공",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000860": {
+    "code": "000860",
+    "name": "강남제비스코",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000880": {
+    "code": "000880",
+    "name": "한화",
+    "s_score": 0.0,
+    "confidence": 0.7,
+    "news_count": 8,
+    "analyst_count": 0,
+    "summary": "heuristic pos=1 neg=1"
+  },
+  "000890": {
+    "code": "000890",
+    "name": "보해양조",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000910": {
+    "code": "000910",
+    "name": "유니온",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000950": {
+    "code": "000950",
+    "name": "전방",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000970": {
+    "code": "000970",
+    "name": "한국주철관",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "000990": {
+    "code": "000990",
+    "name": "DB하이텍",
+    "s_score": 0.0,
+    "confidence": 0.28,
+    "news_count": 1,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "001020": {
+    "code": "001020",
+    "name": "페이퍼코리아",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001040": {
+    "code": "001040",
+    "name": "CJ",
+    "s_score": 0.0,
+    "confidence": 0.6000000000000001,
+    "news_count": 5,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "001045": {
+    "code": "001045",
+    "name": "CJ우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001060": {
+    "code": "001060",
+    "name": "JW중외제약",
+    "s_score": 0.0,
+    "confidence": 0.52,
+    "news_count": 4,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "001065": {
+    "code": "001065",
+    "name": "JW중외제약우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001067": {
+    "code": "001067",
+    "name": "JW중외제약2우B",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001070": {
+    "code": "001070",
+    "name": "대한방직",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001080": {
+    "code": "001080",
+    "name": "만호제강",
+    "s_score": -20.0,
+    "confidence": 0.28,
+    "news_count": 1,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=1"
+  },
+  "001120": {
+    "code": "001120",
+    "name": "LX인터내셔널",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001130": {
+    "code": "001130",
+    "name": "대한제분",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001200": {
+    "code": "001200",
+    "name": "유진투자증권",
+    "s_score": -20.0,
+    "confidence": 0.44,
+    "news_count": 3,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=1"
+  },
+  "001210": {
+    "code": "001210",
+    "name": "금호전기",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001230": {
+    "code": "001230",
+    "name": "동국홀딩스",
+    "s_score": 0.0,
+    "confidence": 0.28,
+    "news_count": 1,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "001250": {
+    "code": "001250",
+    "name": "GS글로벌",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001260": {
+    "code": "001260",
+    "name": "남광토건",
+    "s_score": 20.0,
+    "confidence": 0.28,
+    "news_count": 1,
+    "analyst_count": 0,
+    "summary": "heuristic pos=1 neg=0"
+  },
+  "001270": {
+    "code": "001270",
+    "name": "부국증권",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001275": {
+    "code": "001275",
+    "name": "부국증권우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001290": {
+    "code": "001290",
+    "name": "상상인증권",
+    "s_score": 0.0,
+    "confidence": 0.36,
+    "news_count": 2,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "001340": {
+    "code": "001340",
+    "name": "PKC",
+    "s_score": 0.0,
+    "confidence": 0.36,
+    "news_count": 2,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "001360": {
+    "code": "001360",
+    "name": "삼성제약",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001380": {
+    "code": "001380",
+    "name": "SG글로벌",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001390": {
+    "code": "001390",
+    "name": "KG케미칼",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001420": {
+    "code": "001420",
+    "name": "태원물산",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001430": {
+    "code": "001430",
+    "name": "세아베스틸지주",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001440": {
+    "code": "001440",
+    "name": "대한전선",
+    "s_score": 0.0,
+    "confidence": 0.36,
+    "news_count": 2,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "001450": {
+    "code": "001450",
+    "name": "현대해상",
+    "s_score": 20.0,
+    "confidence": 0.44,
+    "news_count": 3,
+    "analyst_count": 0,
+    "summary": "heuristic pos=1 neg=0"
+  },
+  "001460": {
+    "code": "001460",
+    "name": "BYC",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001465": {
+    "code": "001465",
+    "name": "BYC우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001470": {
+    "code": "001470",
+    "name": "삼부토건",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001500": {
+    "code": "001500",
+    "name": "현대차증권",
+    "s_score": 60.0,
+    "confidence": 0.7,
+    "news_count": 8,
+    "analyst_count": 0,
+    "summary": "heuristic pos=3 neg=0"
+  },
+  "001510": {
+    "code": "001510",
+    "name": "SK증권",
+    "s_score": 60.0,
+    "confidence": 0.7,
+    "news_count": 7,
+    "analyst_count": 0,
+    "summary": "heuristic pos=3 neg=0"
+  },
+  "001515": {
+    "code": "001515",
+    "name": "SK증권우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001520": {
+    "code": "001520",
+    "name": "동양",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001525": {
+    "code": "001525",
+    "name": "동양우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001527": {
+    "code": "001527",
+    "name": "동양2우B",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001530": {
+    "code": "001530",
+    "name": "DI동일",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001550": {
+    "code": "001550",
+    "name": "조비",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001560": {
+    "code": "001560",
+    "name": "제일연마",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001570": {
+    "code": "001570",
+    "name": "금양",
+    "s_score": 0.0,
+    "confidence": 0.28,
+    "news_count": 1,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "001620": {
+    "code": "001620",
+    "name": "케이비아이동국실업",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001630": {
+    "code": "001630",
+    "name": "종근당홀딩스",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001680": {
+    "code": "001680",
+    "name": "대상",
+    "s_score": 0.0,
+    "confidence": 0.28,
+    "news_count": 1,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "001685": {
+    "code": "001685",
+    "name": "대상우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001720": {
+    "code": "001720",
+    "name": "신영증권",
+    "s_score": 20.0,
+    "confidence": 0.7,
+    "news_count": 7,
+    "analyst_count": 0,
+    "summary": "heuristic pos=1 neg=0"
+  },
+  "001740": {
+    "code": "001740",
+    "name": "SK네트웍스",
+    "s_score": 20.0,
+    "confidence": 0.6000000000000001,
+    "news_count": 5,
+    "analyst_count": 0,
+    "summary": "heuristic pos=2 neg=1"
+  },
+  "001750": {
+    "code": "001750",
+    "name": "한양증권",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001755": {
+    "code": "001755",
+    "name": "한양증권우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001770": {
+    "code": "001770",
+    "name": "SHD",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001780": {
+    "code": "001780",
+    "name": "알루코",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001790": {
+    "code": "001790",
+    "name": "대한제당",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001795": {
+    "code": "001795",
+    "name": "대한제당우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001800": {
+    "code": "001800",
+    "name": "오리온홀딩스",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "001820": {
+    "code": "001820",
+    "name": "삼화콘덴서",
+    "s_score": -20.0,
+    "confidence": 0.36,
+    "news_count": 2,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=1"
+  },
+  "001940": {
+    "code": "001940",
+    "name": "KISCO홀딩스",
+    "s_score": 0.0,
+    "confidence": 0.28,
+    "news_count": 1,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "002020": {
+    "code": "002020",
+    "name": "코오롱",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002025": {
+    "code": "002025",
+    "name": "코오롱우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002030": {
+    "code": "002030",
+    "name": "아세아",
+    "s_score": 0.0,
+    "confidence": 0.28,
+    "news_count": 1,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "002070": {
+    "code": "002070",
+    "name": "비비안",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002100": {
+    "code": "002100",
+    "name": "경농",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002140": {
+    "code": "002140",
+    "name": "고려산업",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002150": {
+    "code": "002150",
+    "name": "도화엔지니어링",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002170": {
+    "code": "002170",
+    "name": "SYTS",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002200": {
+    "code": "002200",
+    "name": "한국수출포장",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002210": {
+    "code": "002210",
+    "name": "동성제약",
+    "s_score": 0.0,
+    "confidence": 0.52,
+    "news_count": 4,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "002220": {
+    "code": "002220",
+    "name": "한일철강",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002240": {
+    "code": "002240",
+    "name": "고려제강",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002310": {
+    "code": "002310",
+    "name": "아세아제지",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002320": {
+    "code": "002320",
+    "name": "한진",
+    "s_score": 20.0,
+    "confidence": 0.28,
+    "news_count": 1,
+    "analyst_count": 0,
+    "summary": "heuristic pos=1 neg=0"
+  },
+  "002350": {
+    "code": "002350",
+    "name": "넥센타이어",
+    "s_score": 0.0,
+    "confidence": 0.44,
+    "news_count": 3,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "002355": {
+    "code": "002355",
+    "name": "넥센타이어1우B",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002360": {
+    "code": "002360",
+    "name": "SH에너지화학",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002380": {
+    "code": "002380",
+    "name": "KCC",
+    "s_score": 0.0,
+    "confidence": 0.28,
+    "news_count": 1,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "002390": {
+    "code": "002390",
+    "name": "한독",
+    "s_score": 0.0,
+    "confidence": 0.28,
+    "news_count": 1,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "002410": {
+    "code": "002410",
+    "name": "범양건영",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002420": {
+    "code": "002420",
+    "name": "세기상사",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002450": {
+    "code": "002450",
+    "name": "삼익악기",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002460": {
+    "code": "002460",
+    "name": "HS화성",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002600": {
+    "code": "002600",
+    "name": "조흥",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002620": {
+    "code": "002620",
+    "name": "제일파마홀딩스",
+    "s_score": 0.0,
+    "confidence": 0.28,
+    "news_count": 1,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "002630": {
+    "code": "002630",
+    "name": "오리엔트바이오",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002690": {
+    "code": "002690",
+    "name": "동일제강",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002700": {
+    "code": "002700",
+    "name": "신일전자",
+    "s_score": 0.0,
+    "confidence": 0.28,
+    "news_count": 1,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "002710": {
+    "code": "002710",
+    "name": "TCC스틸",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002720": {
+    "code": "002720",
+    "name": "국제약품",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002760": {
+    "code": "002760",
+    "name": "보락",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002780": {
+    "code": "002780",
+    "name": "진흥기업",
+    "s_score": 20.0,
+    "confidence": 0.28,
+    "news_count": 1,
+    "analyst_count": 0,
+    "summary": "heuristic pos=1 neg=0"
+  },
+  "002785": {
+    "code": "002785",
+    "name": "진흥기업우B",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002787": {
+    "code": "002787",
+    "name": "진흥기업2우B",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002790": {
+    "code": "002790",
+    "name": "아모레퍼시픽홀딩스",
+    "s_score": 0.0,
+    "confidence": 0.52,
+    "news_count": 4,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "002795": {
+    "code": "002795",
+    "name": "아모레퍼시픽홀딩스우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002810": {
+    "code": "002810",
+    "name": "삼영무역",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002820": {
+    "code": "002820",
+    "name": "SUN&L",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002840": {
+    "code": "002840",
+    "name": "미원상사",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002870": {
+    "code": "002870",
+    "name": "신풍",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002880": {
+    "code": "002880",
+    "name": "디와이에이",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002900": {
+    "code": "002900",
+    "name": "TYM",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002920": {
+    "code": "002920",
+    "name": "유성기업",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002960": {
+    "code": "002960",
+    "name": "한국쉘석유",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002990": {
+    "code": "002990",
+    "name": "금호건설",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "002995": {
+    "code": "002995",
+    "name": "금호건설우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003000": {
+    "code": "003000",
+    "name": "부광약품",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003010": {
+    "code": "003010",
+    "name": "혜인",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003030": {
+    "code": "003030",
+    "name": "세아제강지주",
+    "s_score": 40.0,
+    "confidence": 0.44,
+    "news_count": 3,
+    "analyst_count": 0,
+    "summary": "heuristic pos=2 neg=0"
+  },
+  "003060": {
+    "code": "003060",
+    "name": "에이프로젠바이오로직스",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003070": {
+    "code": "003070",
+    "name": "코오롱글로벌",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003075": {
+    "code": "003075",
+    "name": "코오롱글로벌우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003080": {
+    "code": "003080",
+    "name": "SB성보",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003090": {
+    "code": "003090",
+    "name": "대웅",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003120": {
+    "code": "003120",
+    "name": "일성아이에스",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003160": {
+    "code": "003160",
+    "name": "디아이",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003200": {
+    "code": "003200",
+    "name": "일신방직",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003220": {
+    "code": "003220",
+    "name": "대원제약",
+    "s_score": 0.0,
+    "confidence": 0.28,
+    "news_count": 1,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "003230": {
+    "code": "003230",
+    "name": "삼양식품",
+    "s_score": 0.0,
+    "confidence": 0.6799999999999999,
+    "news_count": 6,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "003240": {
+    "code": "003240",
+    "name": "태광산업",
+    "s_score": 0.0,
+    "confidence": 0.36,
+    "news_count": 2,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "003280": {
+    "code": "003280",
+    "name": "흥아해운",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003300": {
+    "code": "003300",
+    "name": "한일홀딩스",
+    "s_score": 0.0,
+    "confidence": 0.28,
+    "news_count": 1,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "003350": {
+    "code": "003350",
+    "name": "한국화장품제조",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003460": {
+    "code": "003460",
+    "name": "유화증권",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003465": {
+    "code": "003465",
+    "name": "유화증권우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003470": {
+    "code": "003470",
+    "name": "유안타증권",
+    "s_score": 40.0,
+    "confidence": 0.7,
+    "news_count": 8,
+    "analyst_count": 0,
+    "summary": "heuristic pos=2 neg=0"
+  },
+  "003475": {
+    "code": "003475",
+    "name": "유안타증권우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003480": {
+    "code": "003480",
+    "name": "한진중공업홀딩스",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003490": {
+    "code": "003490",
+    "name": "대한항공",
+    "s_score": 0.0,
+    "confidence": 0.7,
+    "news_count": 8,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "003495": {
+    "code": "003495",
+    "name": "대한항공우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003520": {
+    "code": "003520",
+    "name": "영진약품",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003530": {
+    "code": "003530",
+    "name": "한화투자증권",
+    "s_score": -20.0,
+    "confidence": 0.6000000000000001,
+    "news_count": 5,
+    "analyst_count": 0,
+    "summary": "heuristic pos=1 neg=2"
+  },
+  "003535": {
+    "code": "003535",
+    "name": "한화투자증권우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003540": {
+    "code": "003540",
+    "name": "대신증권",
+    "s_score": 0.0,
+    "confidence": 0.7,
+    "news_count": 8,
+    "analyst_count": 0,
+    "summary": "heuristic pos=1 neg=1"
+  },
+  "003545": {
+    "code": "003545",
+    "name": "대신증권우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003547": {
+    "code": "003547",
+    "name": "대신증권2우B",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003550": {
+    "code": "003550",
+    "name": "LG",
+    "s_score": 0.0,
+    "confidence": 0.7,
+    "news_count": 8,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "003555": {
+    "code": "003555",
+    "name": "LG우",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003570": {
+    "code": "003570",
+    "name": "SNT다이내믹스",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003580": {
+    "code": "003580",
+    "name": "HLB글로벌",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003610": {
+    "code": "003610",
+    "name": "방림",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003620": {
+    "code": "003620",
+    "name": "KG모빌리티",
+    "s_score": 0.0,
+    "confidence": 0.44,
+    "news_count": 3,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "003650": {
+    "code": "003650",
+    "name": "미창석유",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003670": {
+    "code": "003670",
+    "name": "포스코퓨처엠",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003680": {
+    "code": "003680",
+    "name": "한성기업",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003690": {
+    "code": "003690",
+    "name": "코리안리",
+    "s_score": 0.0,
+    "confidence": 0.52,
+    "news_count": 4,
+    "analyst_count": 0,
+    "summary": "heuristic pos=0 neg=0"
+  },
+  "003720": {
+    "code": "003720",
+    "name": "삼영",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003780": {
+    "code": "003780",
+    "name": "진양산업",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003830": {
+    "code": "003830",
+    "name": "대한화섬",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  },
+  "003850": {
+    "code": "003850",
+    "name": "보령",
+    "s_score": 0.0,
+    "confidence": 0.0,
+    "news_count": 0,
+    "analyst_count": 0,
+    "summary": "no overnight inputs"
+  }
+}

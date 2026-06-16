@@ -1,0 +1,119 @@
+[
+  {
+    "code": "017670",
+    "name": "",
+    "side": "SELL",
+    "quantity": 50,
+    "ref_price": 108100.0,
+    "amount": 5405000.0,
+    "reason": "remove non-target"
+  },
+  {
+    "code": "030200",
+    "name": "",
+    "side": "SELL",
+    "quantity": 95,
+    "ref_price": 53800.0,
+    "amount": 5111000.0,
+    "reason": "remove non-target"
+  },
+  {
+    "code": "402340",
+    "name": "",
+    "side": "SELL",
+    "quantity": 3,
+    "ref_price": 1269000.0,
+    "amount": 3807000.0,
+    "reason": "remove non-target"
+  },
+  {
+    "code": "001440",
+    "name": "대한전선",
+    "side": "BUY",
+    "quantity": 40,
+    "ref_price": 37750.0,
+    "amount": 1510000.0,
+    "reason": "target_weight=0.0750"
+  },
+  {
+    "code": "003530",
+    "name": "한화투자증권",
+    "side": "BUY",
+    "quantity": 283,
+    "ref_price": 5430.0,
+    "amount": 1536690.0,
+    "reason": "target_weight=0.0750"
+  },
+  {
+    "code": "001500",
+    "name": "현대차증권",
+    "side": "BUY",
+    "quantity": 176,
+    "ref_price": 8720.0,
+    "amount": 1534720.0,
+    "reason": "target_weight=0.0750"
+  },
+  {
+    "code": "000270",
+    "name": "기아",
+    "side": "BUY",
+    "quantity": 9,
+    "ref_price": 161500.0,
+    "amount": 1453500.0,
+    "reason": "target_weight=0.0750"
+  },
+  {
+    "code": "003490",
+    "name": "대한항공",
+    "side": "BUY",
+    "quantity": 62,
+    "ref_price": 24550.0,
+    "amount": 1522100.0,
+    "reason": "target_weight=0.0750"
+  },
+  {
+    "code": "001720",
+    "name": "신영증권",
+    "side": "BUY",
+    "quantity": 24,
+    "ref_price": 168000.0,
+    "amount": 4032000.0,
+    "reason": "target_weight=0.2000"
+  },
+  {
+    "code": "000720",
+    "name": "현대건설",
+    "side": "BUY",
+    "quantity": 13,
+    "ref_price": 118300.0,
+    "amount": 1537900.0,
+    "reason": "target_weight=0.0750"
+  },
+  {
+    "code": "000880",
+    "name": "한화",
+    "side": "BUY",
+    "quantity": 13,
+    "ref_price": 114600.0,
+    "amount": 1489800.0,
+    "reason": "target_weight=0.0750"
+  },
+  {
+    "code": "001200",
+    "name": "유진투자증권",
+    "side": "BUY",
+    "quantity": 358,
+    "ref_price": 4290.0,
+    "amount": 1535820.0,
+    "reason": "target_weight=0.0750"
+  },
+  {
+    "code": "002350",
+    "name": "넥센타이어",
+    "side": "BUY",
+    "quantity": 611,
+    "ref_price": 6710.0,
+    "amount": 4099810.0,
+    "reason": "target_weight=0.2000"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "code": "069500",
+    "name": "KODEX 200",
+    "relative_return_bps": 300.0,
+    "confidence": 0.569090167632594,
+    "reason": "S_SCORE·모멘텀·수급·NAV변화 종합"
+  },
+  {
+    "code": "122630",
+    "name": "KODEX 레버리지",
+    "relative_return_bps": 300.0,
+    "confidence": 0.569999999671713,
+    "reason": "S_SCORE·모멘텀·수급·NAV변화 종합"
+  },
+  {
+    "code": "102110",
+    "name": "TIGER 200",
+    "relative_return_bps": 300.0,
+    "confidence": 0.47471493373110607,
+    "reason": "S_SCORE·모멘텀·수급·NAV변화 종합"
+  },
+  {
+    "code": "449450",
+    "name": "PLUS K방산",
+    "relative_return_bps": 213.59574128521345,
+    "confidence": 0.3691607517850187,
+    "reason": "S_SCORE·모멘텀·수급·NAV변화 종합"
+  },
+  {
+    "code": "379810",
+    "name": "KODEX 미국나스닥100",
+    "relative_return_bps": 139.56127767449735,
+    "confidence": 0.35,
+    "reason": "S_SCORE·모멘텀·수급·NAV변화 종합"
+  },
+  {
+    "code": "091170",
+    "name": "KODEX 은행",
+    "relative_return_bps": 286.94154802601406,
+    "confidence": 0.3765378013509204,
+    "reason": "S_SCORE·모멘텀·수급·NAV변화 종합"
+  },
+  {
+    "code": "294400",
+    "name": "KOSEF 200TR",
+    "relative_return_bps": 300.0,
+    "confidence": 0.35570324931900577,
+    "reason": "S_SCORE·모멘텀·수급·NAV변화 종합"
+  },
+  {
+    "code": "091160",
+    "name": "KODEX 반도체",
+    "relative_return_bps": 300.0,
+    "confidence": 0.41269428943218367,
+    "reason": "S_SCORE·모멘텀·수급·NAV변화 종합"
+  },
+  {
+    "code": "233740",
+    "name": "KODEX 코스닥150레버리지",
+    "relative_return_bps": 300.0,
+    "confidence": 0.49999641497372393,
+    "reason": "S_SCORE·모멘텀·수급·NAV변화 종합"
+  },
+  {
+    "code": "117460",
+    "name": "KODEX 에너지화학",
+    "relative_return_bps": 58.07239835889959,
+    "confidence": 0.351943891168195,
+    "reason": "S_SCORE·모멘텀·수급·NAV변화 종합"
+  }
+]

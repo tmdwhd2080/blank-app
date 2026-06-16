@@ -43,6 +43,30 @@ log = logging.getLogger(__name__)
 os.makedirs(SAVE_DIR, exist_ok=True)
 
 
+def _get(url, *, headers=None, timeout=10, retries=3, backoff=1.5):
+    """requests.get 래퍼 — 간헐적 타임아웃/연결오류 시 자동 재시도(백오프).
+
+    기존 동작과 호환: 성공하면 동일하게 Response 를 반환하고,
+    재시도(retries회)를 모두 실패하면 '마지막 예외를 그대로' raise 하므로
+    호출부의 try/except·반환값 사용이 전혀 바뀌지 않는다.
+    """
+    last_exc = None
+    for attempt in range(1, retries + 1):
+        try:
+            return requests.get(
+                url,
+                headers=headers if headers is not None else HEADERS,
+                timeout=timeout,
+            )
+        except requests.RequestException as exc:
+            last_exc = exc
+            if attempt < retries:
+                wait = backoff * attempt
+                log.warning(f"요청 실패 {attempt}/{retries} ({url}) → {wait:.1f}s 후 재시도: {exc}")
+                time.sleep(wait)
+    raise last_exc
+
+
 # ═══════════════════════════════════════════════════════
 #  테마별 베타값 (BETA.py 산출, 2025.11.04~2026.02.04 평균)
 #  THEME_ID(=theme_no) → Beta
@@ -132,7 +156,7 @@ def fetch_kospi_index() -> dict:
     # 방식 1: 모바일 JSON API (가장 안정적)
     try:
         url = "https://m.stock.naver.com/api/index/KOSPI/basic"
-        resp = requests.get(url, headers={
+        resp = _get(url, headers={
             **HEADERS,
             'Referer': 'https://m.stock.naver.com/',
         }, timeout=5)
@@ -151,7 +175,7 @@ def fetch_kospi_index() -> dict:
     # 방식 2: HTML 폴백
     try:
         url = "https://finance.naver.com/sise/sise_index.naver?code=KOSPI"
-        resp = requests.get(url, headers=HEADERS, timeout=5)
+        resp = _get(url, headers=HEADERS, timeout=5)
         resp.encoding = 'euc-kr'
         soup = BeautifulSoup(resp.text, 'html.parser')
 
@@ -184,7 +208,7 @@ def fetch_kospi_index() -> dict:
 
 def get_last_page() -> int:
     url = "https://finance.naver.com/sise/theme.naver?&page=1"
-    resp = requests.get(url, headers=HEADERS, timeout=10)
+    resp = _get(url, headers=HEADERS, timeout=10)
     resp.encoding = 'euc-kr'
     soup = BeautifulSoup(resp.text, 'html.parser')
 
@@ -202,7 +226,7 @@ def get_last_page() -> int:
 
 def parse_theme_page(page: int) -> pd.DataFrame:
     url = f"https://finance.naver.com/sise/theme.naver?&page={page}"
-    resp = requests.get(url, headers=HEADERS, timeout=10)
+    resp = _get(url, headers=HEADERS, timeout=10)
     resp.encoding = 'euc-kr'
     soup = BeautifulSoup(resp.text, 'html.parser')
 
@@ -282,7 +306,7 @@ def crawl_all_themes() -> pd.DataFrame:
 
 def get_theme_detail(theme_no: int) -> pd.DataFrame:
     url = f"https://finance.naver.com/sise/sise_group_detail.naver?type=theme&no={theme_no}"
-    resp = requests.get(url, headers=HEADERS, timeout=10)
+    resp = _get(url, headers=HEADERS, timeout=10)
     resp.encoding = 'euc-kr'
     soup = BeautifulSoup(resp.text, 'html.parser')
 

@@ -1,0 +1,11 @@
+﻿code,name,relative_return_bps,confidence,reason
+001440,대한전선,-300.0,0.75,fallback from S_SCORE and one-week momentum
+003530,한화투자증권,-232.51612903225794,0.75,fallback from S_SCORE and one-week momentum
+001500,현대차증권,-220.13963039014374,0.75,fallback from S_SCORE and one-week momentum
+000270,기아,-141.02982349360917,0.75,fallback from S_SCORE and one-week momentum
+003490,대한항공,-221.03703703703695,0.75,fallback from S_SCORE and one-week momentum
+001720,신영증권,-60.0806916426513,0.75,fallback from S_SCORE and one-week momentum
+000720,현대건설,-300.0,0.75,fallback from S_SCORE and one-week momentum
+000880,한화,-300.0,0.75,fallback from S_SCORE and one-week momentum
+001200,유진투자증권,-233.7398543184184,0.67,fallback from S_SCORE and one-week momentum
+002350,넥센타이어,24.427480916030753,0.2,fallback from S_SCORE and one-week momentum

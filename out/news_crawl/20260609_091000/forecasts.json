@@ -1,0 +1,72 @@
+[
+  {
+    "code": "001440",
+    "name": "대한전선",
+    "relative_return_bps": -300.0,
+    "confidence": 0.75,
+    "reason": "fallback from S_SCORE and one-week momentum"
+  },
+  {
+    "code": "003530",
+    "name": "한화투자증권",
+    "relative_return_bps": -232.51612903225794,
+    "confidence": 0.75,
+    "reason": "fallback from S_SCORE and one-week momentum"
+  },
+  {
+    "code": "001500",
+    "name": "현대차증권",
+    "relative_return_bps": -220.13963039014374,
+    "confidence": 0.75,
+    "reason": "fallback from S_SCORE and one-week momentum"
+  },
+  {
+    "code": "000270",
+    "name": "기아",
+    "relative_return_bps": -141.02982349360917,
+    "confidence": 0.75,
+    "reason": "fallback from S_SCORE and one-week momentum"
+  },
+  {
+    "code": "003490",
+    "name": "대한항공",
+    "relative_return_bps": -221.03703703703695,
+    "confidence": 0.75,
+    "reason": "fallback from S_SCORE and one-week momentum"
+  },
+  {
+    "code": "001720",
+    "name": "신영증권",
+    "relative_return_bps": -60.0806916426513,
+    "confidence": 0.75,
+    "reason": "fallback from S_SCORE and one-week momentum"
+  },
+  {
+    "code": "000720",
+    "name": "현대건설",
+    "relative_return_bps": -300.0,
+    "confidence": 0.75,
+    "reason": "fallback from S_SCORE and one-week momentum"
+  },
+  {
+    "code": "000880",
+    "name": "한화",
+    "relative_return_bps": -300.0,
+    "confidence": 0.75,
+    "reason": "fallback from S_SCORE and one-week momentum"
+  },
+  {
+    "code": "001200",
+    "name": "유진투자증권",
+    "relative_return_bps": -233.7398543184184,
+    "confidence": 0.67,
+    "reason": "fallback from S_SCORE and one-week momentum"
+  },
+  {
+    "code": "002350",
+    "name": "넥센타이어",
+    "relative_return_bps": 24.427480916030753,
+    "confidence": 0.2,
+    "reason": "fallback from S_SCORE and one-week momentum"
+  }
+]

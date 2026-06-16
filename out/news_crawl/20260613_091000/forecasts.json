@@ -1,0 +1,72 @@
+[
+  {
+    "code": "122630",
+    "name": "KODEX 레버리지",
+    "relative_return_bps": 241.88207348168555,
+    "confidence": 0.5620537674719807,
+    "reason": "S_SCORE·모멘텀·수급·NAV변화 종합"
+  },
+  {
+    "code": "102110",
+    "name": "TIGER 200",
+    "relative_return_bps": 183.8570273658736,
+    "confidence": 0.46930762331500786,
+    "reason": "S_SCORE·모멘텀·수급·NAV변화 종합"
+  },
+  {
+    "code": "091160",
+    "name": "KODEX 반도체",
+    "relative_return_bps": 300.0,
+    "confidence": 0.44299953019540617,
+    "reason": "S_SCORE·모멘텀·수급·NAV변화 종합"
+  },
+  {
+    "code": "229200",
+    "name": "KODEX 코스닥150",
+    "relative_return_bps": 170.42137161860134,
+    "confidence": 0.38270923595402884,
+    "reason": "S_SCORE·모멘텀·수급·NAV변화 종합"
+  },
+  {
+    "code": "069500",
+    "name": "KODEX 200",
+    "relative_return_bps": 112.55902770593418,
+    "confidence": 0.3794765342151137,
+    "reason": "S_SCORE·모멘텀·수급·NAV변화 종합"
+  },
+  {
+    "code": "233740",
+    "name": "KODEX 코스닥150레버리지",
+    "relative_return_bps": 180.25736800630403,
+    "confidence": 0.42000000000000004,
+    "reason": "S_SCORE·모멘텀·수급·NAV변화 종합"
+  },
+  {
+    "code": "449450",
+    "name": "PLUS K방산",
+    "relative_return_bps": 199.53029030902923,
+    "confidence": 0.35902807485929067,
+    "reason": "S_SCORE·모멘텀·수급·NAV변화 종합"
+  },
+  {
+    "code": "305540",
+    "name": "TIGER 2차전지테마",
+    "relative_return_bps": 90.46111162022511,
+    "confidence": 0.3550231210746951,
+    "reason": "S_SCORE·모멘텀·수급·NAV변화 종합"
+  },
+  {
+    "code": "294400",
+    "name": "KOSEF 200TR",
+    "relative_return_bps": 93.7023663091804,
+    "confidence": 0.35302359038958553,
+    "reason": "S_SCORE·모멘텀·수급·NAV변화 종합"
+  },
+  {
+    "code": "278530",
+    "name": "KODEX 200TR",
+    "relative_return_bps": 91.37845828933482,
+    "confidence": 0.35,
+    "reason": "S_SCORE·모멘텀·수급·NAV변화 종합"
+  }
+]

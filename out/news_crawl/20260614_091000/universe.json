@@ -1,0 +1,27 @@
+[
+  {
+    "code": "069500",
+    "name": "KODEX 200",
+    "market": "ETF"
+  },
+  {
+    "code": "102110",
+    "name": "TIGER 200",
+    "market": "ETF"
+  },
+  {
+    "code": "122630",
+    "name": "KODEX 레버리지",
+    "market": "ETF"
+  },
+  {
+    "code": "252670",
+    "name": "KODEX 200선물인버스2X",
+    "market": "ETF"
+  },
+  {
+    "code": "229200",
+    "name": "KODEX 코스닥150",
+    "market": "ETF"
+  }
+]

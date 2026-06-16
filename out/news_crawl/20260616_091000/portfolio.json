@@ -1,0 +1,89 @@
+{
+  "targets": [
+    {
+      "code": "069500",
+      "name": "KODEX 200",
+      "weight": 0.1,
+      "expected_return_ann": null,
+      "current_price": 139550.0
+    },
+    {
+      "code": "122630",
+      "name": "KODEX 레버리지",
+      "weight": 0.1,
+      "expected_return_ann": null,
+      "current_price": 203030.0
+    },
+    {
+      "code": "102110",
+      "name": "TIGER 200",
+      "weight": 0.1,
+      "expected_return_ann": null,
+      "current_price": 139520.0
+    },
+    {
+      "code": "449450",
+      "name": "PLUS K방산",
+      "weight": 0.1,
+      "expected_return_ann": null,
+      "current_price": 72125.0
+    },
+    {
+      "code": "379810",
+      "name": "KODEX 미국나스닥100",
+      "weight": 0.1,
+      "expected_return_ann": null,
+      "current_price": 30605.0
+    },
+    {
+      "code": "091170",
+      "name": "KODEX 은행",
+      "weight": 0.1,
+      "expected_return_ann": null,
+      "current_price": 16500.0
+    },
+    {
+      "code": "294400",
+      "name": "KOSEF 200TR",
+      "weight": 0.1,
+      "expected_return_ann": null,
+      "current_price": 182555.0
+    },
+    {
+      "code": "091160",
+      "name": "KODEX 반도체",
+      "weight": 0.1,
+      "expected_return_ann": null,
+      "current_price": 171815.0
+    },
+    {
+      "code": "233740",
+      "name": "KODEX 코스닥150레버리지",
+      "weight": 0.1,
+      "expected_return_ann": null,
+      "current_price": 12665.0
+    },
+    {
+      "code": "117460",
+      "name": "KODEX 에너지화학",
+      "weight": 0.1,
+      "expected_return_ann": null,
+      "current_price": 16390.0
+    }
+  ],
+  "diagnostics": {
+    "method": "equal_weight_insufficient_history",
+    "plan": "premium",
+    "investor_profile": {
+      "risk_appetite": 7.0,
+      "target_return_pct": 12.0,
+      "profile_text": "투기적 성향 7.0/10, 연 목표수익률 12.0%"
+    },
+    "premium_parameters": {
+      "base_tau": 0.05,
+      "tau": 0.094,
+      "base_risk_aversion": 2.5,
+      "risk_aversion": 2.0625
+    }
+  }
+}

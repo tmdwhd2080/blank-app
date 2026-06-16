@@ -1,0 +1,81 @@
+{
+  "targets": [
+    {
+      "code": "122630",
+      "name": "KODEX 레버리지",
+      "weight": 0.0,
+      "expected_return_ann": 9.765798979641763,
+      "current_price": 182370.0
+    },
+    {
+      "code": "102110",
+      "name": "TIGER 200",
+      "weight": 0.20137576785698383,
+      "expected_return_ann": 4.847149914543634,
+      "current_price": 129575.0
+    },
+    {
+      "code": "091160",
+      "name": "KODEX 반도체",
+      "weight": 0.22358178512374732,
+      "expected_return_ann": 6.09308667008609,
+      "current_price": 168740.0
+    },
+    {
+      "code": "229200",
+      "name": "KODEX 코스닥150",
+      "weight": 0.18336640355165681,
+      "expected_return_ann": 4.547936666823102,
+      "current_price": 18015.0
+    },
+    {
+      "code": "069500",
+      "name": "KODEX 200",
+      "weight": 0.059522669290427085,
+      "expected_return_ann": 4.848464733009458,
+      "current_price": 129270.0
+    },
+    {
+      "code": "233740",
+      "name": "KODEX 코스닥150레버리지",
+      "weight": 0.0,
+      "expected_return_ann": 8.698753154793332,
+      "current_price": 13000.0
+    },
+    {
+      "code": "449450",
+      "name": "PLUS K방산",
+      "weight": 0.2177799008162689,
+      "expected_return_ann": 4.035311539502806,
+      "current_price": 63510.0
+    },
+    {
+      "code": "305540",
+      "name": "TIGER 2차전지테마",
+      "weight": 0.06480427071016653,
+      "expected_return_ann": 4.137610790095245,
+      "current_price": 21605.0
+    },
+    {
+      "code": "294400",
+      "name": "KOSEF 200TR",
+      "weight": 0.02632086174162132,
+      "expected_return_ann": 4.855414894943731,
+      "current_price": 169215.0
+    },
+    {
+      "code": "278530",
+      "name": "KODEX 200TR",
+      "weight": 0.023248340909128168,
+      "expected_return_ann": 4.87815750922589,
+      "current_price": 46715.0
+    }
+  ],
+  "diagnostics": {
+    "method": "black_litterman",
+    "risk_aversion": 2.5,
+    "tau": 0.05,
+    "max_weight": 0.25,
+    "market_mean_ann": 2.6095264738101935
+  }
+}

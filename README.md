@@ -19,6 +19,8 @@
 - FINAL_V2.py: GROWTH 팩터에 대해서만 스코어 증가량 하위 10개 숏하는 변형
 
 
+
+
 5. 네이버 테마주 전략(본부장님 업무)
 
 # Theme_model
@@ -38,3 +40,7 @@
 
 9. K2_K2F
 - 강한 상승장 및 강한 하락장에 대해서 코스피 레버리지 ETF를 추종하는 LP들이 언제 선물을 매수 및 매도할 지를 10초 단위로 포착
+
+
+cd C:\Users\tmdwhd2080\Desktop\blank-app-1
+>> python -m news_crawl.api_server --host 127.0.0.1 --port 8765

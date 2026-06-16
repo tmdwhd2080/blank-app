@@ -1,0 +1,58 @@
+{
+  "targets": [
+    {
+      "code": "122630",
+      "name": "KODEX 레버리지",
+      "weight": 0.11763979085639908,
+      "expected_return_ann": 7.982886629538571,
+      "current_price": 205120.0
+    },
+    {
+      "code": "102110",
+      "name": "TIGER 200",
+      "weight": 0.25,
+      "expected_return_ann": 3.9545906418023757,
+      "current_price": 137290.0
+    },
+    {
+      "code": "069500",
+      "name": "KODEX 200",
+      "weight": 0.25,
+      "expected_return_ann": 3.954293808369999,
+      "current_price": 137140.0
+    },
+    {
+      "code": "229200",
+      "name": "KODEX 코스닥150",
+      "weight": 0.2473523131499977,
+      "expected_return_ann": 3.308247874059563,
+      "current_price": 18265.0
+    },
+    {
+      "code": "252670",
+      "name": "KODEX 200선물인버스2X",
+      "weight": 0.13500789599360322,
+      "expected_return_ann": -7.989460074848103,
+      "current_price": 74.0
+    }
+  ],
+  "diagnostics": {
+    "method": "black_litterman",
+    "risk_aversion": 1.8750000000000002,
+    "tau": 0.10350000000000002,
+    "max_weight": 0.25,
+    "market_mean_ann": 2.6095264738101935,
+    "plan": "premium",
+    "investor_profile": {
+      "risk_appetite": 8.0,
+      "target_return_pct": 15.0,
+      "profile_text": "투기적 성향 8.0/10, 연 목표수익률 15.0%"
+    },
+    "premium_parameters": {
+      "base_tau": 0.05,
+      "tau": 0.10350000000000002,
+      "base_risk_aversion": 2.5,
+      "risk_aversion": 1.8750000000000002
+    }
+  }
+}
