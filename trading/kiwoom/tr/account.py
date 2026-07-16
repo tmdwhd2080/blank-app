@@ -60,16 +60,24 @@ def holdings(
 def open_orders(
     client: KiwoomClient,
     *,
+    qry_tp: str = "1",
+    stk_bond_tp: str = "0",
+    sell_tp: str = "0",
     all_stk_tp: str = "0",  # '0' 전체 / '1' 종목
     trde_tp: str = "0",     # '0' 전체 / '1' 매도 / '2' 매수
     stex_tp: str = "0",     # '0' 통합 / '1' KRX / '2' NXT
+    dmst_stex_tp: str = "KRX",
     stk_cd: str = "",
 ) -> list[dict]:
     """미체결 주문 조회. 주문 매니저가 정정/취소 결정 시 사용."""
     body = {
+        "qry_tp": qry_tp,
+        "stk_bond_tp": stk_bond_tp,
+        "sell_tp": sell_tp,
         "all_stk_tp": all_stk_tp,
         "trde_tp": trde_tp,
         "stex_tp": stex_tp,
+        "dmst_stex_tp": dmst_stex_tp,
         "stk_cd": stk_cd,
     }
     return client.call_paginated(

@@ -8,6 +8,9 @@
 trading/.env
 trading/.kis.env
 trading/.kis.env.local
+etf_fair_value/.env
+etf_fair_value/.krx.env
+etf_fair_value/.krx.env.local
 **/.kiwoom/
 **/.kis/
 
@@ -15,10 +18,16 @@ trading/.kis.env.local
 !.env.example
 !trading/.env.example
 !trading/.kis.env.example
+!etf_fair_value/.krx.env.example
 
 # 브라우저 프로필 / 자동화 임시 산출물 (쿠키·로그인·세션 토큰 포함, 절대 공개 금지)
 .codex_tmp/
 **/chrome-profile*/
+
+# Telegram user sessions
+.telegram_sessions/
+*.session
+*.session-journal
 
 # ============================================================
 #  Python

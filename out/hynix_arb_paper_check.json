@@ -1,0 +1,58 @@
+{
+  "strategy": "sk_hynix_cash_and_carry",
+  "true_arbitrage_supported_by_kiwoom_rest": false,
+  "can_verify_arbitrage_profit_now": false,
+  "profit_check_note": "A true profit check requires both stock BUY and stock-future SELL fills, then an exit or mark-to-market on both legs. The current Kiwoom REST client only has domestic stock order TRs.",
+  "signal": {
+    "code": "000660",
+    "name": "SK하이닉스",
+    "spot": 2702000.0,
+    "futures": 2723000.0,
+    "theo": 2703969.0,
+    "days": 10,
+    "r": 0.0,
+    "dividend": 0.0,
+    "basis": 21000.0,
+    "gap": 19031.0,
+    "disparity_%": 0.7,
+    "net_edge_%": 0.26,
+    "cost_%": 0.44,
+    "vendor_theo": 2703969.0,
+    "signal": "★BUY-ARB"
+  },
+  "signal_bool": true,
+  "volume": 548363.0,
+  "open_interest": 1680752.0,
+  "estimated_underlying_price": 2702000.0,
+  "estimated_contract_value": 27020000.0,
+  "future_contract": {
+    "short_code": "A50607",
+    "standard_code": "KR4A50670004",
+    "name": "SK하이닉스 F 202607 (  10)",
+    "expiry_yyyymm": "202607",
+    "multiplier": 10
+  },
+  "legs": [
+    {
+      "asset": "stock",
+      "side": "BUY",
+      "code": "000660",
+      "qty": 10,
+      "order_type": "3",
+      "price": 0,
+      "status": "planned"
+    },
+    {
+      "asset": "stock_future",
+      "side": "SELL",
+      "code": "A50607",
+      "qty": 1,
+      "status": "unsupported",
+      "reason": "Kiwoom REST domestic-stock guide exposes stock order TRs, not stock-future order TRs."
+    }
+  ],
+  "stock_order_result": {
+    "dry_run": true,
+    "message": "skipped: futures leg is unsupported; pass --allow-unhedged-stock-leg to test stock-only order routing"
+  }
+}

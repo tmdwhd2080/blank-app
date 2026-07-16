@@ -3,6 +3,10 @@
 
 Secrets are read from environment variables or local-only env files:
 
+    KIS_PROFILE=real|demo_stock|demo_derivatives
+
+Or the legacy single-key form:
+
     KIS_APP_KEY
     KIS_APP_SECRET
     KIS_ENV=real|demo
@@ -28,10 +32,59 @@ import requests
 
 
 KisEnv = Literal["real", "demo"]
+KisProfile = Literal["real", "demo_stock", "demo_derivatives"]
 
 
 class KisError(RuntimeError):
     """KIS API or local configuration error."""
+
+
+_PROFILE_ALIASES: dict[str, KisProfile] = {
+    "real": "real",
+    "live": "real",
+    "prod": "real",
+    "production": "real",
+    "demo": "demo_stock",
+    "mock": "demo_stock",
+    "paper": "demo_stock",
+    "demo_stock": "demo_stock",
+    "demo_stocks": "demo_stock",
+    "mock_stock": "demo_stock",
+    "mock_stocks": "demo_stock",
+    "paper_stock": "demo_stock",
+    "paper_stocks": "demo_stock",
+    "demo_derivative": "demo_derivatives",
+    "demo_derivatives": "demo_derivatives",
+    "demo_future": "demo_derivatives",
+    "demo_futures": "demo_derivatives",
+    "mock_derivative": "demo_derivatives",
+    "mock_derivatives": "demo_derivatives",
+    "mock_future": "demo_derivatives",
+    "mock_futures": "demo_derivatives",
+    "paper_derivative": "demo_derivatives",
+    "paper_derivatives": "demo_derivatives",
+    "paper_future": "demo_derivatives",
+    "paper_futures": "demo_derivatives",
+}
+
+_PROFILE_ENV: dict[KisProfile, KisEnv] = {
+    "real": "real",
+    "demo_stock": "demo",
+    "demo_derivatives": "demo",
+}
+
+_PROFILE_PREFIXES: dict[KisProfile, tuple[str, ...]] = {
+    "real": ("KIS_REAL",),
+    "demo_stock": ("KIS_DEMO_STOCK", "KIS_PAPER_STOCK", "KIS_MOCK_STOCK"),
+    "demo_derivatives": (
+        "KIS_DEMO_DERIVATIVES",
+        "KIS_DEMO_FUTURES",
+        "KIS_PAPER_DERIVATIVES",
+        "KIS_PAPER_FUTURES",
+        "KIS_MOCK_DERIVATIVES",
+        "KIS_MOCK_FUTURES",
+    ),
+}
 
 
 @dataclass(frozen=True)
@@ -39,6 +92,7 @@ class KisConfig:
     app_key: str
     app_secret: str
     env: KisEnv = "real"
+    profile: KisProfile | None = None
     custtype: str = "P"
     token_cache_path: Path = Path.home() / ".kis" / "token_real.json"
 
@@ -51,12 +105,12 @@ class KisConfig:
     @classmethod
     def from_env(cls) -> "KisConfig":
         _load_local_secret_files()
-        env = os.environ.get("KIS_ENV", "real").lower()
+        profile = _normalize_profile(os.environ.get("KIS_PROFILE"))
+        env = _select_env(profile)
         if env not in ("real", "demo"):
             raise KisError("KIS_ENV must be 'real' or 'demo'.")
 
-        app_key = os.environ.get("KIS_APP_KEY", "").strip()
-        app_secret = os.environ.get("KIS_APP_SECRET", "").strip()
+        app_key, app_secret = _select_credentials(profile)
         missing = [
             name
             for name, value in (
@@ -66,21 +120,75 @@ class KisConfig:
             if not value
         ]
         if missing:
-            raise KisError("Missing environment variables: " + ", ".join(missing))
+            raise KisError(
+                "Missing KIS credentials: "
+                + ", ".join(missing)
+                + ". Set "
+                + _credential_hint(profile)
+                + "."
+            )
 
         cache = os.environ.get("KIS_TOKEN_CACHE")
+        cache_name = profile or env
         token_cache_path = (
             Path(cache)
             if cache
-            else Path.home() / ".kis" / f"token_{env}.json"
+            else Path.home() / ".kis" / f"token_{cache_name}.json"
         )
         return cls(
             app_key=app_key,
             app_secret=app_secret,
             env=env,  # type: ignore[arg-type]
+            profile=profile,
             custtype=os.environ.get("KIS_CUSTTYPE", "P"),
             token_cache_path=token_cache_path,
         )
+
+
+def _normalize_profile(raw: str | None) -> KisProfile | None:
+    if raw is None or not raw.strip():
+        return None
+    key = raw.strip().lower().replace("-", "_").replace(" ", "_")
+    try:
+        return _PROFILE_ALIASES[key]
+    except KeyError as exc:
+        raise KisError(
+            "KIS_PROFILE must be one of: real, demo_stock, demo_derivatives."
+        ) from exc
+
+
+def _select_env(profile: KisProfile | None) -> str:
+    if profile is not None:
+        return _PROFILE_ENV[profile]
+    return os.environ.get("KIS_ENV", "real").lower()
+
+
+def _select_credentials(profile: KisProfile | None) -> tuple[str, str]:
+    if profile is not None:
+        for prefix in _PROFILE_PREFIXES[profile]:
+            app_key = os.environ.get(f"{prefix}_APP_KEY", "").strip()
+            app_secret = os.environ.get(f"{prefix}_APP_SECRET", "").strip()
+            if app_key or app_secret:
+                return app_key, app_secret
+        if profile != "real":
+            return "", ""
+
+    return (
+        os.environ.get("KIS_APP_KEY", "").strip(),
+        os.environ.get("KIS_APP_SECRET", "").strip(),
+    )
+
+
+def _credential_hint(profile: KisProfile | None) -> str:
+    if profile is None:
+        return "KIS_APP_KEY and KIS_APP_SECRET"
+    options = [
+        f"{prefix}_APP_KEY and {prefix}_APP_SECRET"
+        for prefix in _PROFILE_PREFIXES[profile]
+    ]
+    if profile == "real":
+        options.append("KIS_APP_KEY and KIS_APP_SECRET")
+    return " or ".join(options)
 
 
 def _load_local_secret_files() -> None:

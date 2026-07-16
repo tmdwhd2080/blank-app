@@ -16,6 +16,9 @@
 
     # 4) 실시간 반복 (15초 간격)
     python -m trading.arb.scanner scan --r 0.035 --loop 15
+
+    # 5) SK하이닉스 주문 계획/키움 모의 현물 주문 스모크 테스트
+    python -m trading.arb.scanner trade-hynix --paper-order
 """
 
 from __future__ import annotations
@@ -24,6 +27,8 @@ import argparse
 import json
 import sys
 import time
+from dataclasses import asdict
+from pathlib import Path
 
 from trading.kis import KisClient, KisError
 from trading.kis import stocks, stock_futures
@@ -33,6 +38,7 @@ from trading.arb.theory import (
     evaluate_vendor,
     implied_r,
 )
+from trading.arb.ou import OUPosition, RollingOU
 
 
 # ============================================================
@@ -127,6 +133,7 @@ def scan_once(
     min_edge: float,
     min_volume: float,
     my_r: float | None,
+    codes: set[str] | None = None,
 ) -> list[tuple[ArbResult, float | None, float | None]]:
     """KIS 괴리율(dprt)을 신뢰하는 스캔. 선물 1콜/종목.
 
@@ -135,6 +142,8 @@ def scan_once(
     """
     out: list[tuple[ArbResult, float | None, float | None]] = []
     for code, name in UNIVERSE.items():
+        if codes is not None and code not in codes:
+            continue
         fut_row = future_map.get(code)
         if fut_row is None:
             continue  # 주식선물 미상장/매핑 실패 → 스킵
@@ -186,6 +195,126 @@ def _print_table(rows: list[tuple[ArbResult, float | None, float | None]]) -> No
     print(f"\n신호 {len(signals)}건 / 평가 {len(rows)}종목")
 
 
+def _build_ou_rows(
+    rows: list[tuple[ArbResult, float | None, float | None]],
+    *,
+    models: dict[str, RollingOU],
+    positions: dict[str, OUPosition],
+    args: argparse.Namespace,
+    now: float,
+) -> list[dict[str, object]]:
+    out: list[dict[str, object]] = []
+    for res, vol, oi in rows:
+        x_bps = res.net_edge_rate * 10000.0
+        model = models.setdefault(
+            res.code,
+            RollingOU(window_sec=args.ou_window_sec, min_samples=args.ou_min_samples),
+        )
+        model.add(now, x_bps)
+        params = model.estimate()
+
+        z = None
+        half_life = None
+        pnl_bps = None
+        action = "WARMUP"
+        reason = f"samples={model.sample_count}/{args.ou_min_samples}"
+
+        if params is not None:
+            z = params.z_score(x_bps)
+            half_life = params.half_life_sec
+            pos = positions.get(res.code)
+            valid_z = z is not None
+            max_half_life_ok = (
+                args.ou_max_half_life_sec <= 0
+                or (half_life is not None and half_life <= args.ou_max_half_life_sec)
+            )
+
+            if pos is None:
+                if not valid_z:
+                    action = "WAIT"
+                    reason = "z_unavailable"
+                elif x_bps <= args.min_edge * 10000.0:
+                    action = "WAIT"
+                    reason = "net_edge_below_min"
+                elif z < args.ou_entry_z:
+                    action = "WAIT"
+                    reason = "z_below_entry"
+                elif args.require_reversion and (not params.valid or half_life is None):
+                    action = "WAIT"
+                    reason = "reversion_invalid"
+                elif args.require_reversion and half_life < args.ou_min_half_life_sec:
+                    action = "WAIT"
+                    reason = "half_life_too_short"
+                elif args.require_reversion and not max_half_life_ok:
+                    action = "WAIT"
+                    reason = "half_life_too_long"
+                else:
+                    positions[res.code] = OUPosition(
+                        entry_ts=now,
+                        entry_z=z,
+                        entry_x_bps=x_bps,
+                        entry_half_life_sec=half_life,
+                    )
+                    action = "ENTER_BUY_CARRY"
+                    reason = "entry_z_and_reversion" if args.require_reversion else "entry_z_only"
+            else:
+                held_sec = now - pos.entry_ts
+                pnl_bps = pos.entry_x_bps - x_bps
+                if valid_z and z <= args.ou_exit_z:
+                    positions.pop(res.code, None)
+                    action = "EXIT_Z"
+                    reason = "z_reverted"
+                elif held_sec >= args.ou_max_hold_sec:
+                    positions.pop(res.code, None)
+                    action = "EXIT_TIME"
+                    reason = "max_hold_elapsed"
+                else:
+                    action = "HOLD_POSITION"
+                    reason = f"held_sec={held_sec:.0f}"
+
+        out.append(
+            {
+                "code": res.code,
+                "name": res.name,
+                "spot": res.spot,
+                "futures": res.futures,
+                "theo": res.theo,
+                "net_edge_bps": x_bps,
+                "pnl_bps": pnl_bps,
+                "z": z,
+                "half_life_sec": half_life,
+                "volume": vol,
+                "open_interest": oi,
+                "action": action,
+                "reason": reason,
+            }
+        )
+
+    out.sort(key=lambda row: float(row["net_edge_bps"]), reverse=True)
+    return out
+
+
+def _print_ou_table(rows: list[dict[str, object]]) -> None:
+    print(
+        "\n"
+        f"{'code':<8}{'name':<16}{'net_bps':>9}{'pnl_bps':>9}{'z':>8}{'hl_sec':>9}"
+        f"{'spot':>11}{'future':>11}{'volume':>11}  action"
+    )
+    for row in rows:
+        z = row["z"]
+        half_life = row["half_life_sec"]
+        pnl = row["pnl_bps"]
+        z_text = "" if z is None else f"{float(z):.2f}"
+        hl_text = "" if half_life is None else f"{float(half_life):.0f}"
+        pnl_text = "" if pnl is None else f"{float(pnl):.2f}"
+        print(
+            f"{str(row['code']):<8}{str(row['name'])[:15]:<16}"
+            f"{float(row['net_edge_bps']):>9.2f}{pnl_text:>9}{z_text:>8}{hl_text:>9}"
+            f"{float(row['spot']):>11,.0f}{float(row['futures']):>11,.0f}"
+            f"{float(row['volume'] or 0):>11,.0f}  {row['action']} ({row['reason']})"
+        )
+
+
 # ============================================================
 # CLI
 # ============================================================
@@ -213,6 +342,64 @@ def cmd_scan(args) -> int:
             min_volume=args.min_volume, my_r=args.my_r,
         )
         _print_table(rows_out)
+        if not args.loop:
+            return 0
+        time.sleep(args.loop)
+
+
+def cmd_scan_ou_aware(args) -> int:
+    client = KisClient()
+    cost = CostModel(
+        commission_rate=args.commission,
+        tax_rate=args.tax,
+        slippage_rate=args.slippage,
+    )
+    codes = {code.strip().zfill(6) for code in args.codes.split(",") if code.strip()} if args.codes else None
+    mode = "KIS disparity" if args.my_r is None else f"funding adjusted my_r={args.my_r:.4f}"
+    print(
+        f"[settings] mode={mode} roundtrip_cost={cost.roundtrip_rate()*100:.3f}% "
+        f"min_edge={args.min_edge*100:.3f}% min_volume={args.min_volume:,.0f}"
+    )
+    print(f"[cost] {cost.breakdown()}")
+    if args.use_ou:
+        print(
+            "[OU] enabled "
+            f"window={args.ou_window_sec:.0f}s min_samples={args.ou_min_samples} "
+            f"entry_z={args.ou_entry_z:.2f} exit_z={args.ou_exit_z:.2f} "
+            f"require_reversion={args.require_reversion} "
+            f"min_half_life={args.ou_min_half_life_sec:.0f}s"
+        )
+        if not args.loop:
+            print("[OU] one-shot scan has no history; it will usually print WARMUP only.")
+
+    print("[master] loading stock futures map...", file=sys.stderr)
+    rows = stock_futures.download_stock_futures_master()
+    future_map = stock_futures.front_future_by_underlying(rows)
+    print(f"[master] mapped underlyings={len(future_map)}", file=sys.stderr)
+
+    ou_models: dict[str, RollingOU] = {}
+    ou_positions: dict[str, OUPosition] = {}
+    while True:
+        rows_out = scan_once(
+            client,
+            future_map,
+            cost=cost,
+            min_edge=args.min_edge,
+            min_volume=args.min_volume,
+            my_r=args.my_r,
+            codes=codes,
+        )
+        if args.use_ou:
+            ou_rows = _build_ou_rows(
+                rows_out,
+                models=ou_models,
+                positions=ou_positions,
+                args=args,
+                now=time.time(),
+            )
+            _print_ou_table(ou_rows)
+        else:
+            _print_table(rows_out)
         if not args.loop:
             return 0
         time.sleep(args.loop)
@@ -291,6 +478,139 @@ def cmd_probe_master(args) -> int:
     return 0
 
 
+def _stock_future_multiplier(name: str) -> int:
+    import re
+
+    match = re.search(r"\(\s*(\d+)\s*\)", name or "")
+    return int(match.group(1)) if match else 10
+
+
+def cmd_trade_hynix(args) -> int:
+    """Build a SK Hynix cash-and-carry order plan and optionally place the stock leg."""
+    code = "000660"
+    client = KisClient()
+    cost = CostModel(
+        commission_rate=args.commission,
+        tax_rate=args.tax,
+        slippage_rate=args.slippage,
+    )
+    rows = stock_futures.download_stock_futures_master()
+    future_map = stock_futures.front_future_by_underlying(rows)
+    fut_row = future_map.get(code)
+    if fut_row is None:
+        print("[trade-hynix] SK Hynix stock future was not found in the KIS master.", file=sys.stderr)
+        return 2
+
+    rows_out = scan_once(
+        client,
+        future_map,
+        cost=cost,
+        min_edge=args.min_edge,
+        min_volume=args.min_volume,
+        my_r=args.my_r,
+        codes={code},
+    )
+    if not rows_out:
+        print("[trade-hynix] no usable SK Hynix quote/result after filters.", file=sys.stderr)
+        return 2
+
+    res, volume, open_interest = rows_out[0]
+    multiplier = _stock_future_multiplier(fut_row.korean_name)
+    stock_qty = args.stock_qty if args.stock_qty is not None else multiplier * args.future_qty
+    estimated_underlying_price = res.spot
+    estimated_contract_value = res.spot * multiplier if multiplier else res.spot
+    stock_price = (
+        0
+        if args.stock_order_type in {"3", "13", "23"}
+        else int(args.stock_price or round(estimated_underlying_price))
+    )
+    payload: dict[str, object] = {
+        "strategy": "sk_hynix_cash_and_carry",
+        "true_arbitrage_supported_by_kiwoom_rest": False,
+        "can_verify_arbitrage_profit_now": False,
+        "profit_check_note": (
+            "A true profit check requires both stock BUY and stock-future SELL fills, "
+            "then an exit or mark-to-market on both legs. The current Kiwoom REST "
+            "client only has domestic stock order TRs."
+        ),
+        "signal": res.as_row(),
+        "signal_bool": res.signal,
+        "volume": volume,
+        "open_interest": open_interest,
+        "estimated_underlying_price": estimated_underlying_price,
+        "estimated_contract_value": estimated_contract_value,
+        "future_contract": {
+            "short_code": fut_row.short_code,
+            "standard_code": fut_row.standard_code,
+            "name": fut_row.korean_name,
+            "expiry_yyyymm": fut_row.expiry_yyyymm,
+            "multiplier": multiplier,
+        },
+        "legs": [
+            {
+                "asset": "stock",
+                "side": "BUY",
+                "code": code,
+                "qty": stock_qty,
+                "order_type": args.stock_order_type,
+                "price": stock_price,
+                "status": "planned",
+            },
+            {
+                "asset": "stock_future",
+                "side": "SELL",
+                "code": fut_row.short_code,
+                "qty": args.future_qty,
+                "status": "unsupported",
+                "reason": "Kiwoom REST domestic-stock guide exposes stock order TRs, not stock-future order TRs.",
+            },
+        ],
+    }
+
+    should_send_stock = args.paper_order and (res.signal or args.force_stock_leg)
+    if args.paper_order and not should_send_stock:
+        payload["stock_order_result"] = {
+            "dry_run": True,
+            "message": "skipped: no arbitrage signal; pass --force-stock-leg for a connectivity smoke order",
+        }
+    elif should_send_stock and not args.allow_unhedged_stock_leg:
+        payload["stock_order_result"] = {
+            "dry_run": True,
+            "message": "skipped: futures leg is unsupported; pass --allow-unhedged-stock-leg to test stock-only order routing",
+        }
+    elif should_send_stock:
+        from trading.kiwoom.order_router import KiwoomOrderRouter, OrderRequest
+
+        router = KiwoomOrderRouter(
+            dry_run=False,
+            env=args.kiwoom_env,
+            require_paper=not args.allow_real_order,
+        )
+        result = router.place(
+            OrderRequest(
+                side="BUY",
+                code=code,
+                qty=stock_qty,
+                price=stock_price,
+                order_type=args.stock_order_type,
+                exchange=args.exchange,
+            )
+        )
+        payload["stock_order_result"] = asdict(result)
+    else:
+        payload["stock_order_result"] = {
+            "dry_run": True,
+            "message": "dry_run: pass --paper-order to attempt Kiwoom paper stock order routing",
+        }
+
+    text = json.dumps(payload, ensure_ascii=False, indent=2)
+    print(text)
+    if args.out:
+        args.out.parent.mkdir(parents=True, exist_ok=True)
+        args.out.write_text(text + "\n", encoding="utf-8")
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(prog="arb.scanner", description="주식선물 매수차익 스캐너")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -305,7 +625,17 @@ def build_parser() -> argparse.ArgumentParser:
     sp.add_argument("--tax", type=float, default=0.0018, help="증권거래세(현물 매도)")
     sp.add_argument("--slippage", type=float, default=0.0005, help="편도 슬리피지")
     sp.add_argument("--loop", type=int, default=0, help="반복 간격(초). 0=1회")
-    sp.set_defaults(handler=cmd_scan)
+    sp.add_argument("--codes", default="", help="Comma-separated underlyings, e.g. 000660.")
+    sp.add_argument("--use-ou", action="store_true", help="Use rolling OU z-score entry/exit logic.")
+    sp.add_argument("--ou-window-sec", type=float, default=3600.0, help="Rolling OU lookback window.")
+    sp.add_argument("--ou-min-samples", type=int, default=20, help="Samples required before OU signals.")
+    sp.add_argument("--ou-entry-z", type=float, default=1.0, help="Buy-carry entry z threshold.")
+    sp.add_argument("--ou-exit-z", type=float, default=0.3, help="Exit when z reverts below this.")
+    sp.add_argument("--require-reversion", action="store_true", help="Require OU-valid half-life filter for entry.")
+    sp.add_argument("--ou-min-half-life-sec", type=float, default=60.0, help="Minimum half-life for entry.")
+    sp.add_argument("--ou-max-half-life-sec", type=float, default=0.0, help="Optional max half-life. 0 disables.")
+    sp.add_argument("--ou-max-hold-sec", type=float, default=600.0, help="Force exit after this many seconds.")
+    sp.set_defaults(handler=cmd_scan_ou_aware)
 
     sp = sub.add_parser("probe", help="종목1개 원시 응답 덤프")
     sp.add_argument("code", help="현물 6자리 종목코드")
@@ -319,6 +649,26 @@ def build_parser() -> argparse.ArgumentParser:
     sp.add_argument("code", help="현물 6자리 종목코드")
     sp.add_argument("--dividend", type=float, default=0.0, help="만기내 배당락 DPS 가정")
     sp.set_defaults(handler=cmd_compare_r)
+
+    sp = sub.add_parser("trade-hynix", help="SK하이닉스 매수차익 계획 및 키움 모의 현물 주문")
+    sp.add_argument("--my-r", type=float, default=None)
+    sp.add_argument("--min-edge", type=float, default=0.0)
+    sp.add_argument("--min-volume", type=float, default=100)
+    sp.add_argument("--commission", type=float, default=0.00015)
+    sp.add_argument("--tax", type=float, default=0.0018)
+    sp.add_argument("--slippage", type=float, default=0.0005)
+    sp.add_argument("--stock-qty", type=int, help="Default is future multiplier * --future-qty.")
+    sp.add_argument("--future-qty", type=int, default=1)
+    sp.add_argument("--stock-price", type=int, default=0, help="Limit price override. 0 uses current KIS spot.")
+    sp.add_argument("--stock-order-type", default="3", help="Kiwoom trde_tp. 3=market, 0=limit.")
+    sp.add_argument("--paper-order", action="store_true", help="Attempt Kiwoom paper stock-leg order routing.")
+    sp.add_argument("--force-stock-leg", action="store_true", help="Send stock leg even without an arbitrage signal.")
+    sp.add_argument("--allow-unhedged-stock-leg", action="store_true", help="Permit stock-only order despite unsupported futures leg.")
+    sp.add_argument("--kiwoom-env", choices=["paper", "real"], default="paper")
+    sp.add_argument("--exchange", choices=["KRX", "NXT", "SOR"], default="KRX")
+    sp.add_argument("--allow-real-order", action="store_true")
+    sp.add_argument("--out", type=Path)
+    sp.set_defaults(handler=cmd_trade_hynix)
 
     return p
 
